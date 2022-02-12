@@ -44,4 +44,3 @@ class Trip(models.Model):
     def __str__(self):
         return f"name: {self.name}"
 
-
