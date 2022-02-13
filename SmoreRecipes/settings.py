@@ -78,9 +78,7 @@ WSGI_APPLICATION = 'SmoreRecipes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'smoreReceipe',
-        # 'USERNAME': 'josh',
-        # 'PASSWORD': 'password'
+        'NAME': 'smoreRecipe',
     }
 }
 
