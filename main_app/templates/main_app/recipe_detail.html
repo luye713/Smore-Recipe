@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <h3>{{ recipe.name }}</h3>
 <div>
-    <p>img</p>
+    <img src="{% static 'assets/fooddetail/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
 </div>
 
 <div>
