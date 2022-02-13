@@ -24,6 +24,9 @@ class Recipe(models.Model):
     def __str__(self):
         return f"name: {self.name}"
 
+    def get_absolut_url(self):
+        return reverse('recipe_detail', kwargs={'recipe_id': self.id})
+
 class Ingredient(models.Model):
     text = models.CharField(max_length=100)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)

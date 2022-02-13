@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Choose trip to add recipe to:</h1>
+{% for trip in trips %}
+    <div  style="border: 1px solid black;">
+        <p>{{ trip.name }}</p>
+        <p>To {{ trip.destination }}</p>
+        <form action="{% url 'recipe_save' trip.id recipe.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Save</button>
+        </form>
+    </div>
+{% endfor %}
+
+{% endblock %}
