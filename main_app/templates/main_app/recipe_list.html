@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <h1>Explore Recipe</h1>
 
@@ -21,7 +22,7 @@
 
 {% for recipe in recipes %}
     <a class="card" href="{% url 'recipe_detail' recipe.id %}">
-        <img>
+        <img src="{% static 'assets/foodlist/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
         <p>{{ recipe.name }}</p>
     </a>
 {% endfor %}
