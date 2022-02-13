@@ -5,19 +5,19 @@ from django.contrib.auth.models import User
 
 
 class Equipment(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
 
     def __str__(self):
         return f"equipment: {self.name}"
 
 class Category(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
 
     def __str__(self):
         return f"category: {self.name}"
 
 class Recipe(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=100)
     categories = models.ManyToManyField(Category)
     equipments = models.ManyToManyField(Equipment)
 
@@ -25,14 +25,14 @@ class Recipe(models.Model):
         return f"name: {self.name}"
 
 class Ingredient(models.Model):
-    text = models.CharField(max_length=30)
+    text = models.CharField(max_length=100)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"ingredient: {self.text}"
 
 class Instruction(models.Model):
-    text = models.TextField(max_length=200)
+    text = models.TextField(max_length=500)
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -40,8 +40,8 @@ class Instruction(models.Model):
 
 
 class Trip(models.Model):
-    name = models.CharField(max_length=20)
-    destination = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    destination = models.CharField(max_length=100)
     start_date = models.DateField('Start day')
     end_date = models.DateField('End day')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
