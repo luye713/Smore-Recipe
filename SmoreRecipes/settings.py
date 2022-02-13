@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_better_admin_arrayfield'
 ]
 
 MIDDLEWARE = [
@@ -77,9 +78,7 @@ WSGI_APPLICATION = 'SmoreRecipes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'smoreReceipe',
-        # 'USERNAME': 'josh',
-        # 'PASSWORD': 'password'
+        'NAME': 'smoreRecipe',
     }
 }
 
