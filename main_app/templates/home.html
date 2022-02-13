@@ -1,24 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h2>Meals</h2>
 
-{% for category in categories %}
-<button>{{ category.name }}</button>
-{% endfor %}
+<h2>Home</h2>
 
-<h2>Equipments</h2>
-
-{% for equipment in equipments %}
-<button>{{ equipment.name }}</button>
-{% endfor %}
-
-{% for recipe in recipes %}
-<a href="{% url 'recipe_detail' recipe_id">
-    <img>
-    <h3>{{ recipe.name }}</h3>
-</a>
-{% endfor %}
 
 {% endblock %}
 

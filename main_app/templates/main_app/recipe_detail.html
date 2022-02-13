@@ -1,8 +1,65 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="row">
-    <h1>A Recipe Detail</h1>
+<h3>{{ recipe.name }}</h3>
+<div style="border: 1px solid black; width: 50%; height: 50px;">
+    <p>img</p>
 </div>
+
+<div>
+    <h4>Category:</h4>
+    {% for category in categories %}
+        <p>{{ category.name }}</p>
+    {% endfor %}
+</div>
+
+<!-- I DON'T KNOW WHY SELECTION BOX DOESN'T WORK HERE -->
+<!-- <div>
+    {% if trips.count %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="select">Choose trips:</label>
+            <select name="trip.id" id="select">
+                {% for trip in trips %}
+                    <option value="{{ trip.id }}">{{ trip.name }}</option>
+                {% endfor %}
+            </select>
+            <input style="border: 1px solid black;" type="submit" value="Add to trip">
+        </form>
+    {% else %}
+        <p>You don't have any trip to add recipe to</p>
+        <p>Click <a href="#">here</a> to create trip</p>
+    {% endif %}
+</div> -->
+
+<div>
+    <form action="{% url 'recipe_choose' recipe.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Add to trip!</button>
+    </form>
+</div>
+
+<div>
+    <h4>Equipments:</h4>
+    {% for equipment in equipments %}
+        <p>{{ equipment.name }}</p>
+    {% endfor %}
+</div>
+
+<div>
+    <h4>Ingredients:</h4>
+    {% for ingredient in recipe.ingredient_set.all %}
+        <p>{{ ingredient.text }}</p>
+    {% endfor %}
+</div>
+
+<div>
+    <h4>Instructions:</h4>
+    {% for instruction in recipe.instruction_set.all %}
+        <p>{{ instruction.text }}</p>
+    {% endfor %}
+</div>
+
+
 
 {% endblock %}

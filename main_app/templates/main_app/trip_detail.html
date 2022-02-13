@@ -10,5 +10,12 @@
         <p>End on {{ trip.end_date }}</p>
     </div>
 </div>
+<div style="border: 1px solid black;">
+    {% for recipe in trip.recipes.all %}
+        <div style="border: 1px solid black;">
+            {{ recipe.name }}
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
