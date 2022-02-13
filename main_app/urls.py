@@ -6,9 +6,9 @@ urlpatterns = [
     path('profile/', views.user_profile, name='user_profile'),
     path('accounts/signup/', views.signup, name='signup'),
     #  Path for Trip:
-    path('trips/', views.trip_list.as_view(), name='trip_list'),
+    path('trips/', views.trip_list, name='trip_list'),
     path('trips/create/', views.trip_create.as_view(), name='trip_create'),
-    path('trips/<int:pk>/', views.trip_detail.as_view(), name='trip_detail'),
+    path('trips/<int:trip_id>/', views.trip_detail, name='trip_detail'),
     path('trips/<int:pk>/delete/', views.trip_delete.as_view(), name='trip_delete'),
     # Path for Recipe:
     path('trips/<int:trip_id>/recipes/', views.recipe_list, name='recipe_list'),

@@ -51,3 +51,6 @@ class Trip(models.Model):
     def __str__(self):
         return f"trip name: {self.name}, destination: {self.destination}"
 
+    def get_absolut_url(self):
+        return reverse('trip_detail', kwargs={'trip_id': self.id})
+
