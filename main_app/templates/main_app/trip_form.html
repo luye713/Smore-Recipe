@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="row">
-    <h1>This page to have form to create Trip</h1>
-</div>
+<h1>Hi {{ user.username }}. Create your trip here.</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Create">
+</form>
+<script>
+    var dateEl = document.getElementById('id_date');
+    M.Datepicker.init(dateEl, {
+        format: 'yyyy-mm-dd',
+        defaultDate: new Date(),
+        setDefaultDate: true,
+        autoClose: true
+    });
+</script>
 
 {% endblock %}

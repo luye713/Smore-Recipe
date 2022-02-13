@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="row">
-    <h1>Trip detail</h1>
+<h1>Trip detail</h1>
+<div style="border: 1px solid black;">
+    <div>
+        <p>{{ trip.name }}</p>
+        <p>To {{ trip.destination }}</p>
+        <p>Begin on {{ trip.start_date }}</p>
+        <p>End on {{ trip.end_date }}</p>
+    </div>
 </div>
 
 {% endblock %}
