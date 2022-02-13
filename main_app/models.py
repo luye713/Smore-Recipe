@@ -1,35 +1,42 @@
-
 from django.db import models
 from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
-from django_better_admin_arrayfield.models.fields import ArrayField
-from django_better_admin_arrayfield.admin.mixins import DynamicArrayMixin
-
-# Create your models here.
 
 
 class Equipment(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
-        return f"name: {self.name}"
+        return f"equipment: {self.name}"
 
 class Category(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
-        return f"name: {self.name}"
+        return f"category: {self.name}"
 
-class Recipe(models.Model, DynamicArrayMixin):
+class Recipe(models.Model):
     name = models.CharField(max_length=20)
-    ingredient = ArrayField(models.CharField(max_length=30))
-    instruction = ArrayField(models.CharField(max_length=200))
     categories = models.ManyToManyField(Category)
     equipments = models.ManyToManyField(Equipment)
 
     def __str__(self):
         return f"name: {self.name}"
+
+class Ingredient(models.Model):
+    text = models.CharField(max_length=30)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"ingredient: {self.text}"
+
+class Instruction(models.Model):
+    text = models.TextField(max_length=200)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"instruction: {self.text}"
 
 
 class Trip(models.Model):
@@ -42,5 +49,5 @@ class Trip(models.Model):
     equipments = models.ManyToManyField(Equipment)
 
     def __str__(self):
-        return f"name: {self.name}"
+        return f"trip name: {self.name}, destination: {self.destination}"
 

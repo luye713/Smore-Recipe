@@ -1,7 +1,7 @@
-# from django.forms import ModelForm
-# from .models import Equipment
+from django.forms import ModelForm
+from .models import Trip
 
-# class EquipmentForm(ModelForm):
-#     class Meta:
-#         model = Equipment
-#         fields = ['name', 'amount']
+class TripForm(ModelForm):
+    class Meta:
+        model = Trip
+        fields = ['name', 'start_date', 'end_date', 'destination']
