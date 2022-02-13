@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -5,12 +6,21 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import User, Trip, Recipe, Ingredient, Instruction, Equipment
+from .models import User, Trip, Recipe, Ingredient, Instruction, Equipment, Category
 from .forms import TripForm
 
 # HOME
 def home(request):
-    return render(request, 'home.html')
+    categories = Category.objects.all()
+    equipments = Equipment.objects.all()
+    recipes = Recipe.objects.all()
+
+    return render(request, 'home.html', {
+        'categories': categories,
+        'equipments': equipments,
+        'recipes': recipes
+    })
+    
 
 @login_required
 def user_profile(request):
