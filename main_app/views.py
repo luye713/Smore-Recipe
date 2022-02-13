@@ -33,8 +33,10 @@ def signup(request):
 
 
 # TRIP
-class trip_list(LoginRequiredMixin, ListView):
-    model = Trip
+@login_required
+def trip_list(request):
+    trips = Trip.objects.filter(user=request.user)
+    return render(request, 'main_app/trip_list.html', { 'trips': trips })
 
 class trip_create(LoginRequiredMixin, CreateView):
     model = Trip
@@ -43,8 +45,10 @@ class trip_create(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user 
         return super().form_valid(form)
 
-class trip_detail(LoginRequiredMixin, DetailView):
-    model = Trip
+@login_required
+def trip_detail(request, trip_id):
+    trip = Trip.objects.filter(id=trip_id, user=request.user)
+    return render(request, 'main_app/trip_detail.html', { 'trip': trip })
 
 class trip_delete(LoginRequiredMixin, DeleteView):
     model = Trip

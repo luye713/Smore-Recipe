@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{ user.username }}'s trips</h1>
+{% for trip in trips %}
+    <a href="{% url 'trip_detail' trip.id %}">
+        <div style="border: 1px solid black;">
+            <div>
+                <p>{{ trip.name }}</p>
+                <p>To {{ trip.destination }}</p>
+                <p>Begin on {{ trip.start_date }}</p>
+                <p>End on {{ trip.end_date }}</p>
+            </div>
+        </div>
+    </a>
+{% endfor %}
+
+{% endblock %}
