@@ -5,18 +5,22 @@
 
 <h2>Meals</h2>
 
+<div class="btn-wrapper">
 {% for category in categories %}
-    <a style="border: 1px solid black;" href="{% url 'recipe_list' category.name selected_equipment %}">{{ category.name }}</a>
+    <a class="btn" href="{% url 'recipe_list' category.name selected_equipment %}">{{ category.name }}</a>
 {% endfor %}
+</div>
 
 <h2>Equipments</h2>
 
+<div class="btn-wrapper">
 {% for equipment in equipments %}
-    <a style="border: 1px solid black;" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
+    <a class="btn" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
 {% endfor %}
+</div>
 
 {% for recipe in recipes %}
-    <a href="{% url 'recipe_detail' recipe.id %}">
+    <a class="card" href="{% url 'recipe_detail' recipe.id %}">
         <img>
         <p>{{ recipe.name }}</p>
     </a>

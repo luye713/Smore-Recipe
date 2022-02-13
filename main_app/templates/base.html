@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>S'more Recipes</title>
 </head>
@@ -13,18 +16,15 @@
     <header class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <ul>
-                    <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Icon</a></li>
-                </ul>
-                <ul class="right">
+            
+                
+                <ul class="nav">
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'trip_list' %}">My Trips</a></li>
-                        <li><a href="{% url 'recipe_list' 'all' 'all' %}">Explore Recipe</a></li>
-                        <li><a href="{% url 'trip_create' %}">Add Trip</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
+                    <a href="/" id="logo"><img src="{% static 'assets/logo.svg' %}"></a>
+                    <li><a href="{% url 'trip_list' %}">My Trips</a></li>
+                    <li><a href="{% url 'recipe_list' 'all' 'all' %}">Explore Recipe</a></li>
+                    <li><a href="{% url 'trip_create' %}">Add Trip</a></li>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
                     {% endif %}
                 </ul>
             </div>

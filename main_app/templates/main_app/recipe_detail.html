@@ -2,7 +2,7 @@
 {% block content %}
 
 <h3>{{ recipe.name }}</h3>
-<div style="border: 1px solid black; width: 50%; height: 50px;">
+<div>
     <p>img</p>
 </div>
 
@@ -35,7 +35,7 @@
 <div>
     <form action="{% url 'recipe_choose' recipe.id %}" method="post">
         {% csrf_token %}
-        <button type="submit">Add to trip!</button>
+        <button class="btn" type="submit">Add to trip!</button>
     </form>
 </div>
 
@@ -46,18 +46,22 @@
     {% endfor %}
 </div>
 
-<div>
+<div class="ingredient_wrapper">
     <h4>Ingredients:</h4>
+    <ul >
     {% for ingredient in recipe.ingredient_set.all %}
-        <p>{{ ingredient.text }}</p>
+        <li>{{ ingredient.text }}</li>
     {% endfor %}
+    </ul>
 </div>
 
-<div>
+<div class="instruction_wrapper">
     <h4>Instructions:</h4>
+    <ol>
     {% for instruction in recipe.instruction_set.all %}
-        <p>{{ instruction.text }}</p>
+        <li>{{ instruction.text }}</li>
     {% endfor %}
+    </ol>
 </div>
 
 
