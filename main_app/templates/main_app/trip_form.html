@@ -8,4 +8,9 @@
     <input class="btn" type="submit" value="Create">
 </form>
 
+<p>Select cooking tools</p>
+{% for equipment in equipments %}
+<a class="btn2" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
+{% endfor %}
+
 {% endblock %}
