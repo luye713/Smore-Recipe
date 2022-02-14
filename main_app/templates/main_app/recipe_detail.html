@@ -14,31 +14,14 @@
     {% endfor %}
 </div>
 
-<!-- I DON'T KNOW WHY SELECTION BOX DOESN'T WORK HERE -->
-<!-- <div>
+<div>
     {% if trips.count %}
-        <form action="" method="post">
-            {% csrf_token %}
-            <label for="select">Choose trips:</label>
-            <select name="trip.id" id="select">
-                {% for trip in trips %}
-                    <option value="{{ trip.id }}">{{ trip.name }}</option>
-                {% endfor %}
-            </select>
-            <input style="border: 1px solid black;" type="submit" value="Add to trip">
-        </form>
+        <a href="{% url 'recipe_choose' recipe.id %}">Add to Trip!</a>
     {% else %}
-        <p>You don't have any trip to add recipe to</p>
-        <p>Click <a href="#">here</a> to create trip</p>
+        <a href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
     {% endif %}
 </div> -->
 
-<div>
-    <form action="{% url 'recipe_choose' recipe.id %}" method="post">
-        {% csrf_token %}
-        <button class="btn" type="submit">Add to trip!</button>
-    </form>
-</div>
 
 <div>
     <h4>Equipments:</h4>

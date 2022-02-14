@@ -2,6 +2,9 @@
 {% block content %}
 {% load static %}
 
+<h1>Add new Trip</h1>
+<a href="{% url 'trip_create' 0 %}">+ New Trip</a>
+
 <h1>Choose trip to add recipe to:</h1>
 
 {% for trip in trips %}
