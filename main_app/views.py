@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, redirect
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -8,6 +8,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import User, Trip, Recipe, Ingredient, Instruction, Equipment, Category
 from .forms import TripForm
+# Download pdf:
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
 
 # HOME
 def home(request):
@@ -114,6 +119,10 @@ def recipe_choose(request, recipe_id):
 def recipe_save(request, trip_id, recipe_id):
     Trip.objects.get(id=trip_id).recipes.add(recipe_id)
     return redirect('recipe_detail', recipe_id=recipe_id)
+
+
+# class recipe_download(View):
+#     pass
 
 
 # EQUIPMENT
