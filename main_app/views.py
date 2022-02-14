@@ -43,8 +43,11 @@ def trip_list(request):
 
 @login_required
 def trip_create(request, recipe_id):
-    trip_form = TripForm()
-    return render(request, 'main_app/trip_form.html', { 'trip_form': trip_form, 'recipe_id': recipe_id })
+    trip_form = TripForm() 
+    return render(request, 'main_app/trip_form.html', { 
+        'trip_form': trip_form, 
+        'recipe_id': recipe_id
+         })
 
 
 def trip_add(request, recipe_id):
@@ -62,13 +65,12 @@ def trip_add(request, recipe_id):
 @login_required
 def trip_detail(request, trip_id):
     trip = Trip.objects.filter(id=trip_id, user=request.user).first()
-    return render(request, 'main_app/trip_detail.html', { 'trip': trip })
+    equipments = Equipment.objects.all()
+    return render(request, 'main_app/trip_detail.html', { 'trip': trip, 'equipments': equipments })
 
-class trip_delete(LoginRequiredMixin, DeleteView):
-    model = Trip
-    success_url = '/trips/'
-
-
+def trip_delete(requst, trip_id):
+    Trip.objects.get(id=trip_id).delete()
+    return redirect('trip_list')
 
 # RECIPE
 @login_required
@@ -120,15 +122,23 @@ def recipe_save(request, trip_id, recipe_id):
     Trip.objects.get(id=trip_id).recipes.add(recipe_id)
     return redirect('recipe_detail', recipe_id=recipe_id)
 
+@login_required
+def recipe_delete(request, trip_id, recipe_id):
+    Trip.objects.get(id=trip_id).recipes.remove(recipe_id)
+    return redirect('trip_detail', trip_id=trip_id)
 
 # class recipe_download(View):
 #     pass
 
 
 # EQUIPMENT
+def assoc_equipment(request, trip_id, equipment_id):
+    Trip.objects.get(id=trip_id).equipments.add(equipment_id)
+    return redirect('trip_detail', trip_id=trip_id)
 
-
-
+def unassoc_equipment(request, trip_id, equipment_id):
+    Trip.objects.get(id=trip_id).equipments.remove(equipment_id)
+    return redirect('trip_detail', trip_id=trip_id)
 
 
 

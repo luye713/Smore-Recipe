@@ -5,12 +5,19 @@
 
 <div>
     <h1>{{ trip.name }}</h1>
+    <div>
+        <a class="btn" href="{% url 'trip_delete' trip.id %}" >delete this trip</a>
+    </div>
     <h3>to {{ trip.destination }}</h3>
     <h4>Begin on {{ trip.start_date }}</h4>
     <h4>End on {{ trip.end_date }}</h4>
     <h4>Cooking tools to bring:</h4>
-    {% for tool in trip.equipment_set.all %}
-        <p class="btn" style="width: 30%;">{{ equipment.name }}</p>
+    {% for equipment in equipments %}
+        {% if equipment in trip.equipments.all %}
+        <a class="btn2" style="width: 30%;" href="{% url 'unassoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
+        {% else %}
+        <a class="btn" style="width: 30%;" href="{% url 'assoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
+        {% endif %}
     {% endfor %}
 </div>
 
@@ -18,6 +25,7 @@
     <h3 style="margin-bottom: -20px;">Saved Recipe:</h3>
     {% for recipe in trip.recipes.all %}
         <div class="card">
+            <a class="btn2" href="{% url 'recipe_delete' trip.id recipe.id %}">delete this recipe</a>
             <a href="{% url 'recipe_detail' recipe.id %}">
                 <img src="{% static 'assets/foodlist/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
                 <p>{{ recipe.name }}</p>
