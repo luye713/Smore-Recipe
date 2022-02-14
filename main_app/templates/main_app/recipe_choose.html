@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <h1>Add new Trip</h1>
 <a href="{% url 'trip_create' 0 %}">+ New Trip</a>
 
 <h1>Choose trip to add recipe to:</h1>
+
 {% for trip in trips %}
     <div  style="border: 1px solid black;">
         <p>{{ trip.name }}</p>
@@ -15,5 +17,7 @@
         </form>
     </div>
 {% endfor %}
+
+<img src="{% static 'assets/trip.svg' %}">
 
 {% endblock %}
