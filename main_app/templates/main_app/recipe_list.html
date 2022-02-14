@@ -6,7 +6,7 @@
 <div class="recipe-cate">
     <h2>Meals</h2>
     {% if selected_category == 'all' %}
-        <a class="btn2" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
+        <a class="btn3" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
     {% else %}
         <a class="btn" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
     {% endif %}
@@ -26,7 +26,7 @@
 
 <div class="btn-wrapper">
     {% if selected_equipment == 'all' %}
-        <a class="btn2" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
+        <a class="btn3" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
     {% else %}
         <a class="btn" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
     {% endif %}
