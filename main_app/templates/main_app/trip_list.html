@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<a href="{% url 'trip_create' 0 %}">+ New Trip</a>
+
 <h1>{{ user.username }}'s trips</h1>
 {% for trip in trips %}
     <a href="{% url 'trip_detail' trip.id %}">

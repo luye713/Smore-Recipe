@@ -36,12 +36,23 @@ def trip_list(request):
     trips = Trip.objects.filter(user=request.user)
     return render(request, 'main_app/trip_list.html', { 'trips': trips })
 
-class trip_create(LoginRequiredMixin, CreateView):
-    model = Trip
-    fields = ['name', 'destination', 'start_date', 'end_date']
-    def form_valid(self, form):
-        form.instance.user = self.request.user 
-        return super().form_valid(form)
+@login_required
+def trip_create(request, recipe_id):
+    trip_form = TripForm()
+    return render(request, 'main_app/trip_form.html', { 'trip_form': trip_form, 'recipe_id': recipe_id })
+
+
+def trip_add(request, recipe_id):
+    form = TripForm(request.POST)
+    if form.is_valid():
+        new_trip = form.save(commit=False)
+        new_trip.user_id = request.user.id
+        new_trip.save()
+    if recipe_id == 0 or recipe_id is None:
+        return redirect('trip_detail', trip_id=new_trip.id)
+    else:
+        return redirect('recipe_detail', recipe_id=recipe_id)
+
 
 @login_required
 def trip_detail(request, trip_id):
@@ -94,8 +105,8 @@ def recipe_detail(request, recipe_id):
 
 @login_required
 def recipe_choose(request, recipe_id):
-    trips = Trip.objects.filter(user=request.user)
     recipe = Recipe.objects.get(id=recipe_id)
+    trips = Trip.objects.filter(user=request.user).exclude(recipes=recipe)
     return render(request, 'main_app/recipe_choose.html', { 'trips': trips, 'recipe': recipe })
 
 
@@ -103,7 +114,6 @@ def recipe_choose(request, recipe_id):
 def recipe_save(request, trip_id, recipe_id):
     Trip.objects.get(id=trip_id).recipes.add(recipe_id)
     return redirect('recipe_detail', recipe_id=recipe_id)
-
 
 
 # EQUIPMENT
