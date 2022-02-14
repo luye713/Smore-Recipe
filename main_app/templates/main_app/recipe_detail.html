@@ -21,7 +21,7 @@
     {% if trips.count %}
         <a class="btn2" style="width: 40%;" href="{% url 'recipe_choose' recipe.id %}">Add to Trip!</a>
     {% else %}
-        <a class="btn2" style="width: 40%;" href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
+        <a class="btn2" style="width: 80%;" href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
     {% endif %}
 </div>
 

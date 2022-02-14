@@ -18,6 +18,8 @@ urlpatterns = [
     path('trips/recipes/<int:recipe_id>/', views.recipe_choose, name='recipe_choose'),
     path('trips/<int:trip_id>/recipes/<int:recipe_id>/', views.recipe_save, name='recipe_save'),
     path('trips/<int:trip_id>/recipes/<int:recipe_id>/delete', views.recipe_delete, name='recipe_delete'),
+    # PDF Download:
+    # path('recipes/<int:pk>/pdf/', views.recipe_download.as_view(), name='recipe_download'),
     # Path for Equipment:
     path('trips/<int:trip_id>/assoc_equipment/<int:equipment_id>/', views.assoc_equipment, name='assoc_equipment'),
     path('trips/<int:trip_id>/unassoc_equipment/<int:equipment_id>/', views.unassoc_equipment, name='unassoc_equipment'),

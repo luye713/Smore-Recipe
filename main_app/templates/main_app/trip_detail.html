@@ -22,6 +22,7 @@
 </div>
 
 <div>
+    <h3 style="margin-bottom: -20px;">Saved Recipe:</h3>
     {% for recipe in trip.recipes.all %}
         <div class="card">
             <a class="btn2" href="{% url 'recipe_delete' trip.id recipe.id %}">delete this recipe</a>
