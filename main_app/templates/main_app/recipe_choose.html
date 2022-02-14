@@ -2,19 +2,16 @@
 {% block content %}
 {% load static %}
 
-<h1>Add new Trip</h1>
-<a href="{% url 'trip_create' 0 %}">+ New Trip</a>
+<a class="btn2" style="width: 35%; margin: 30px 0;" href="{% url 'trip_create' 0 %}">+ New Trip</a>
 
 <h1>Choose trip to add recipe to:</h1>
 
 {% for trip in trips %}
-    <div  style="border: 1px solid black;">
-        <p>{{ trip.name }}</p>
-        <p>To {{ trip.destination }}</p>
-        <form action="{% url 'recipe_save' trip.id recipe.id %}" method="post">
-            {% csrf_token %}
-            <button type="submit">Save</button>
-        </form>
+    <div class="trip-each">
+        <a href="{% url 'recipe_save' trip.id recipe.id %}">
+            <p>{{ trip.name }}</p>
+            <p>To {{ trip.destination }}</p>
+        </a>
     </div>
 {% endfor %}
 

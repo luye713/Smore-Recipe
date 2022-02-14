@@ -7,30 +7,25 @@
     <img src="{% static 'assets/fooddetail/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
 </div>
 
-<div>
-    <h4>Category:</h4>
+
+<div class="btn-wrapper">
     {% for category in categories %}
-        <p>{{ category.name }}</p>
+        <p class="btn" style="width: 30%;">{{ category.name }}</p>
+    {% endfor %}
+    {% for equipment in equipments %}
+        <p class="btn" style="width: 30%;">{{ equipment.name }}</p>
     {% endfor %}
 </div>
 
 <div>
     {% if trips.count %}
-        <a href="{% url 'recipe_choose' recipe.id %}">Add to Trip!</a>
+        <a class="btn2" style="width: 40%;" href="{% url 'recipe_choose' recipe.id %}">Add to Trip!</a>
     {% else %}
-        <a href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
+        <a class="btn2" style="width: 40%;" href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
     {% endif %}
-</div> -->
-
-
-<div>
-    <h4>Equipments:</h4>
-    {% for equipment in equipments %}
-        <p>{{ equipment.name }}</p>
-    {% endfor %}
 </div>
 
-<div class="ingredient_wrapper">
+<div class="ingredient-wrapper">
     <h4>Ingredients:</h4>
     <ul >
     {% for ingredient in recipe.ingredient_set.all %}
@@ -39,13 +34,13 @@
     </ul>
 </div>
 
-<div class="instruction_wrapper">
+<div class="instruction-wrapper">
     <h4>Instructions:</h4>
-    <ol>
+    <ul>
     {% for instruction in recipe.instruction_set.all %}
         <li>{{ instruction.text }}</li>
     {% endfor %}
-    </ol>
+    </ul>
 </div>
 
 

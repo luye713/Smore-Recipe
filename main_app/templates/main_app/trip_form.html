@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Hi {{ user.username }}. Create your trip here.</h1>
-<form action="{% url 'trip_add' recipe_id %}" method="post">
+<h1>Create trip</h1>
+<form class="trip-create" action="{% url 'trip_add' recipe_id %}" method="post">
     {% csrf_token %}
-    <table>
-        {{ trip_form.as_table }}
-    </table>
-    <input type="submit" value="Create">
+    {{ trip_form.as_p }}
+    <input class="btn" type="submit" value="Create">
 </form>
 
 {% endblock %}

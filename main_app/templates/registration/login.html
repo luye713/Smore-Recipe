@@ -7,13 +7,14 @@
     <div id="camping_img"><img src="{% static 'assets/camping.svg' %}"></div>
     <div class="login">
         <h2>Sign-In</h2>
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class="btn2" value="Sign-In">
-        <input type="hidden" name="next" value="{{ next }}">
-    </form>
-    <a class="btn signup" href="{% url 'signup' %}">Sign Up</a>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn2" value="Sign-In">
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+        <a class="btn signup" href="{% url 'signup' %}">Sign Up</a>
     </div>
 </div>
+
 {% endblock %}

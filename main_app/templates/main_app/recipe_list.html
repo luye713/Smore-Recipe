@@ -2,29 +2,50 @@
 {% block content %}
 {% load static %}
 
-<h1>Explore Recipe</h1>
 
-<h2>Meals</h2>
+<div class="recipe-cate">
+    <h2>Meals</h2>
+    {% if selected_category == 'all' %}
+        <a class="btn2" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
+    {% else %}
+        <a class="btn" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
+    {% endif %}
+</div>
 
 <div class="btn-wrapper">
-{% for category in categories %}
-    <a class="btn" href="{% url 'recipe_list' category.name selected_equipment %}">{{ category.name }}</a>
-{% endfor %}
+    {% for category in categories %}
+        {% if category.name == selected_category %}
+            <a class="btn2" href="{% url 'recipe_list' category.name selected_equipment %}">{{ category.name }}</a>
+        {% else %}
+            <a class="btn" href="{% url 'recipe_list' category.name selected_equipment %}">{{ category.name }}</a>
+        {% endif %}
+    {% endfor %}
 </div>
 
 <h2>Equipments</h2>
 
 <div class="btn-wrapper">
-{% for equipment in equipments %}
-    <a class="btn" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
-{% endfor %}
+    {% if selected_equipment == 'all' %}
+        <a class="btn2" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
+    {% else %}
+        <a class="btn" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
+    {% endif %}
+    {% for equipment in equipments %}
+        {% if equipment.name == selected_equipment %}
+            <a class="btn2" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
+        {% else %}
+            <a class="btn" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
+        {% endif %}
+    {% endfor %}
 </div>
 
 {% for recipe in recipes %}
-    <a class="card" href="{% url 'recipe_detail' recipe.id %}">
-        <img src="{% static 'assets/foodlist/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
-        <p>{{ recipe.name }}</p>
-    </a>
+    <div class="card">
+        <a href="{% url 'recipe_detail' recipe.id %}">
+            <img src="{% static 'assets/foodlist/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
+            <p>{{ recipe.name }}</p>
+        </a>
+    </div>
 {% endfor %}
 
 {% endblock %}

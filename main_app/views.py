@@ -86,7 +86,7 @@ def recipe_list(request, category, equipment):
         'equipments': equipments,
         'recipes': recipes,
         'selected_category': category,
-        'selected_equipment': equipment[0:4]
+        'selected_equipment': equipment
     })
 
 @login_required

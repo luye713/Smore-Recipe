@@ -16,18 +16,12 @@
     <header class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-            
-                
                 <ul class="nav">
                     {% if user.is_authenticated %}
-                        <a href="/" id="logo"><img src="{% static 'assets/logo.svg' %}"></a>
-                        <li><a href="{% url 'trip_list' %}">My Trips</a></li>
-                        <li><a href="{% url 'recipe_list' 'all' 'all' %}">Explore Recipe</a></li>
-                        <li><a href="{% url 'trip_create' 0 %}">Add Trip</a></li>
-                        <li><a href="{% url 'logout' %}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                        <li><a href="{% url 'login' %}">Log In</a></li>
+                        <li><a href="/" id="logo"><img src="{% static 'assets/logo.svg' %}"></a></li>
+                        <li><a class="nav-trip" href="{% url 'trip_list' %}">My Trips</a></li>
+                        <li><a class="nav-recipe" href="{% url 'recipe_list' 'all' 'all' %}">Explore</a></li>
+                        <li><a href="{% url 'logout' %}">Log<br>Out</a></li>
                     {% endif %}
                 </ul>
             </div>
