@@ -1,19 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
-<h1>Trip detail</h1>
-<div style="border: 1px solid black;">
-    <div>
-        <p>{{ trip.name }}</p>
-        <p>To {{ trip.destination }}</p>
-        <p>Begin on {{ trip.start_date }}</p>
-        <p>End on {{ trip.end_date }}</p>
-    </div>
+
+<div>
+    <h1>{{ trip.name }}</h1>
+    <h3>to {{ trip.destination }}</h3>
+    <h4>Begin on {{ trip.start_date }}</h4>
+    <h4>End on {{ trip.end_date }}</h4>
+    <h4>Cooking tools to bring:</h4>
+    {% for tool in trip.equipment_set.all %}
+        <p class="btn" style="width: 30%;">{{ equipment.name }}</p>
+    {% endfor %}
 </div>
-<div style="border: 1px solid black;">
+
+<div>
     {% for recipe in trip.recipes.all %}
-        <div style="border: 1px solid black;">
-            {{ recipe.name }}
+        <div class="card">
+            <a href="{% url 'recipe_detail' recipe.id %}">
+                <img src="{% static 'assets/foodlist/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
+                <p>{{ recipe.name }}</p>
+            </a>
         </div>
     {% endfor %}
 </div>
