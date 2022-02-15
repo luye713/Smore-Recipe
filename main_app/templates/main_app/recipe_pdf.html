@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<h1 style="font-size: 30px">{{ recipe.name }}</h1>
+
+
+<div class="ingredient-wrapper">
+    <h2 style="font-size: 25px">Ingredients:</h2>
+    <ul >
+    {% for ingredient in recipe.ingredient_set.all %}
+        <li style="font-size: 20px;">{{ ingredient.text }}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div class="instruction-wrapper">
+    <h2 style="font-size: 25px">Instructions:</h2>
+    <ul>
+    {% for instruction in recipe.instruction_set.all %}
+        <li style="font-size: 20px;">{{ instruction.text }}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+
+
+{% endblock %}
