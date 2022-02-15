@@ -69,11 +69,23 @@ def trip_detail(request, trip_id):
     equipments = Equipment.objects.all()
     return render(request, 'trip_detail.html', { 'trip': trip, 'equipments': equipments })
 
-def trip_delete(requst, trip_id):
+def trip_delete(request, trip_id):
     Trip.objects.get(id=trip_id).delete()
     return redirect('trip_list')
 
+def trip_update_form(request, trip_id):
+    trip = Trip.objects.get(id=trip_id)
+    trip_form = TripForm()
+    return render(request, 'trip_update.html', { 'trip': trip, 'trip_form': trip_form })
 
+def trip_update(request, trip_id):
+    trip = Trip.objects.get(id=trip_id)
+    trip.name = request.POST['name']
+    trip.start_date = request.POST['start_date']
+    trip.end_date = request.POST['end_date']
+    trip.save()
+    
+    return redirect('trip_detail', trip_id=trip_id)
 
 # RECIPE
 @login_required

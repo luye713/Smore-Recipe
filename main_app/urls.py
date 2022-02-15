@@ -12,6 +12,8 @@ urlpatterns = [
     path('trips/add/<int:recipe_id>/', views.trip_add, name='trip_add'),
     path('trips/<int:trip_id>/', views.trip_detail, name='trip_detail'),
     path('trips/<int:trip_id>/delete/', views.trip_delete, name='trip_delete'),
+    path('trips/<int:trip_id>/update_form/', views.trip_update_form, name='trip_update_form'),
+    path('trips/<int:trip_id>/update/', views.trip_update, name='trip_update'),
     # Path for Recipe:
     path('recipes/(?P<category>)/(?P<equipment>)', views.recipe_list, name='recipe_list'),
     path('recipes/<slug:category>/<slug:equipment>/', views.recipe_list, name='recipe_list'),

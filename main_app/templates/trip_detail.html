@@ -7,7 +7,8 @@
     <h1>{{ trip.name }}</h1>
     <h4>{{ trip.start_date }} - {{ trip.end_date }}</h4>
     <div>
-        <a class="btn" href="{% url 'trip_delete' trip.id %}" >delete this trip</a>
+        <a class="btn" href="{% url 'trip_delete' trip.id %}" >Delete this trip</a>
+        <a class="btn" href="{% url 'trip_update_form' trip.id %}" >Edit this trip</a>
     </div>
     <h4>Cooking tools to bring:</h4>
     
