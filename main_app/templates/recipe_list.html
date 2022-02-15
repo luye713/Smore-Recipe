@@ -39,6 +39,7 @@
     {% endfor %}
 </div>
 
+<div class="cards">
 {% for recipe in recipes %}
     <div class="card">
         <a href="{% url 'recipe_detail' recipe.id %}">
@@ -47,5 +48,6 @@
         </a>
     </div>
 {% endfor %}
+</div>
 
 {% endblock %}
