@@ -6,9 +6,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
 
-<a href="{% url 'recipe_choose' recipe_id %}"><img src="{% static 'assets/cancel' %}.svg"></a>
+<a href="{% url 'trip_detail' trip.id %}"><img src="{% static 'assets/cancel' %}.svg"></a>
 
-<form class="trip-create" action="{% url 'trip_add' recipe_id %}" method="post">
+<form class="trip-create" action="{% url 'trip_update' trip.id %}" method="post">
     {% csrf_token %}
     <style>
         .datepicker-container {
@@ -16,7 +16,7 @@
         }
     </style>
     {{ trip_form.as_p }}
-    <input class="btn" type="submit" value="Create">
+    <input class="btn" type="submit" value="Update Trip">
 </form>
 
 <script>
@@ -26,12 +26,11 @@
     $(function () {
         $("#id_end_date").datepicker();
     });
-    $("#id_start_date").datepicker({
-        format: 'yyyy-mm-dd'
-    }); 
-    $("#id_end_date").datepicker({
-        format: 'yyyy-mm-dd'
-    }); 
+    
+    document.getElementById('id_name').value = `{{ trip.name }}`
+    document.getElementById('id_start_date').value = `{{ trip.start_date }}`
+    document.getElementById('id_end_date').value = `{{ trip.end_date }}`
+    
 </script>
 
 {% endblock %}
