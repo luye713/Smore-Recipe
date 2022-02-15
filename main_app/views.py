@@ -50,11 +50,7 @@ def trip_create(request, recipe_id):
     return render(request, 'trip_form.html', { 
         'trip_form': trip_form,
         'recipe_id': recipe_id
-<<<<<<< HEAD
          })
-=======
-    })
->>>>>>> main
 
 def trip_add(request, recipe_id):
     form = TripForm(request.POST)
