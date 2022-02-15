@@ -135,9 +135,9 @@ def html_to_pdf(template_src, context_dict={}):
     html  = template.render(context_dict)
     result = BytesIO()
     pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
-    # if not pdf.err:
-    return HttpResponse(result.getvalue(), content_type='application/pdf')
-    # return None
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 def recipe_download(request, recipe_id):
     def get(request, *args, **kwargs):
