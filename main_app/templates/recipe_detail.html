@@ -27,9 +27,7 @@
 
 <div>
     {% for trip in trips_have_recipe %}
-        
         <span>{{ trip.name }}</span>
-       
     {% endfor %}
     <a class="btn" style="width: 30%; margin: 30px 0;" href="{% url 'recipe_download' recipe.id %}">Download pdf</a>
 </div>
@@ -50,6 +48,42 @@
         <li>{{ instruction.text }}</li>
     {% endfor %}
     </ul>
+</div>
+
+<div class="comment-container">
+    <div class="comment-input">
+        <div class="comment-icon">
+            <p>{{ user.username.0|capfirst }}</p>
+        </div>
+        <div class="comment-form">
+            <form action="{% url 'comment_create' recipe.id %}" method="post">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <input class="btn" type="submit" value="Comment">
+                <script defer>
+                    let one = document.getElementById('id_text').placeholder = "comment ..."
+                </script>
+            </form>
+        </div>
+    </div>
+    <div class="comment-field-container">
+        {% for comment in recipe.comment_set.all %}
+            <div class="comment-field">
+                <div class="comment-field-icon">
+                    <p>{{ comment.user.username.0|capfirst }}</p>
+                </div>
+                <div class="comment-each">
+                    <div class="comment-each-title">
+                        <strong>{{ comment.user.username|capfirst }}</strong>
+                        {% if user == comment.user %}
+                            <a href="{% url 'comment_delete' recipe.id comment.id %}"><small>delete</small></a>
+                        {% endif %}
+                    </div>
+                    <p>{{ comment.text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 

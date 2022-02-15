@@ -27,4 +27,7 @@ urlpatterns = [
     path('groceries/create', views.grocery_create, name='grocery_create'),
     path('groceries/<int:pk>/update', views.grocery_update.as_view(), name='grocery_update'),
     path('groceries/<int:grocery_id>/delete', views.grocery_delete, name='grocery_delete'),
+    #  Path for Comment:
+    path('recipes/<int:recipe_id>/comments/create', views.comment_create, name='comment_create'),
+    path('recipes/<int:recipe_id>/comments/<int:comment_id>/delete', views.comment_delete, name='comment_delete'),
 ]

@@ -9,10 +9,34 @@
 
     {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
 
-    <form method="post" action="{% url 'signup' %}">
+    <form class="signup-form" method="post" action="{% url 'signup' %}">
       {% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" class="btn2" value="signup">
+      <input style="margin-top: 20px;" type="submit" class="btn2" value="signup">
+      <script defer>
+        let one = document.getElementById('id_username')
+        let two = document.getElementById('id_password1')
+        let three = document.getElementById('id_password2')
+        let helptext = document.querySelectorAll('.helptext')
+        one.placeholder = "Username"
+        two.placeholder = "Password"
+        three.placeholder = "Confirm password"
+        one.setAttribute( "autocomplete", "off" )
+        two.setAttribute( "autocomplete", "off" )
+        three.setAttribute( "autocomplete", "off" )
+        one.addEventListener("focus", function() {
+          helptext[0].style.display = "unset"
+        })
+        one.addEventListener("focusout", function() {
+          helptext[0].style.display = "none"
+        })
+        three.addEventListener("focus", function() {
+          helptext[1].style.display = "unset"
+        })
+        three.addEventListener("focusout", function() {
+          helptext[1].style.display = "none"
+        })
+    </script>
     </form>
   </div>
 </div>
