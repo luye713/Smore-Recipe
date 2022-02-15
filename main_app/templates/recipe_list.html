@@ -5,14 +5,14 @@
 
 <div class="recipe-cate">
     <h2>Meals</h2>
-    {% if selected_category == 'all' %}
-        <a class="btn3" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
-    {% else %}
-        <a class="btn" style="margin: 18px 20px;" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
-    {% endif %}
 </div>
 
 <div class="btn-wrapper">
+    {% if selected_category == 'all' %}
+    <a class="btn3" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
+    {% else %}
+        <a class="btn" href="{% url 'recipe_list' 'all' selected_equipment %}">All</a>
+    {% endif %}
     {% for category in categories %}
         {% if category.name == selected_category %}
             <a class="btn2" href="{% url 'recipe_list' category.name selected_equipment %}">{{ category.name }}</a>
@@ -26,16 +26,19 @@
 
 <div class="btn-wrapper">
     {% if selected_equipment == 'all' %}
-        <a class="btn3" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
+        <a class="btn3 all" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
     {% else %}
-        <a class="btn" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
+        <a class="btn all" href="{% url 'recipe_list' selected_category 'all' %}">All</a>
     {% endif %}
     {% for equipment in equipments %}
         {% if equipment.name == selected_equipment %}
-            <a class="btn2" href="{% url 'recipe_list' selected_category equipment.name %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+        <div class="tool-wrapper active">
         {% else %}
-            <a class="btn" href="{% url 'recipe_list' selected_category equipment.name %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+        <div class="tool-wrapper">
         {% endif %}
+            <a class="tool" href="{% url 'recipe_list' selected_category equipment.name %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+            <span>{{ equipment.name }}</span>
+        </div>
     {% endfor %}
 </div>
 

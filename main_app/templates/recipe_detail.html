@@ -2,34 +2,37 @@
 {% block content %}
 {% load static %}
 
+<a href="{% url 'recipe_list' 'all' 'all' %}"><img src="{% static 'assets/goback' %}.svg"></a>
+
 <h3>{{ recipe.name }}</h3>
 <div>
     <img src="{% static 'assets/fooddetail/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
 </div>
 
 
-<div class="btn-wrapper">
+<div class="btn-wrapper recipe">
+    <div class="cat-wrapper">
     {% for category in categories %}
         <p class="btn">{{ category.name }}</p>
     {% endfor %}
+    </div>
+    <div class="equip-wrapper">
     {% for equipment in equipments %}
         <p class="btn"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></p>
     {% endfor %}
+    </div>
 </div>
 
-<div>
-    {% if trips.count %}
-        <a class="btn2" style="width: 40%;" href="{% url 'recipe_choose' recipe.id %}">Add to Trip!</a>
-    {% else %}
-        <a class="btn2" style="width: 80%;" href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
-    {% endif %}
-</div>
 
-<div>
+
+<div class="trip-tags">
+
+    <a class="btn2" href="{% url 'recipe_choose' recipe.id %}">+ Add to Trip!</a>
+
+    <p>Trips that added this recipe:</p>
     {% for trip in trips_have_recipe %}
-        <span>{{ trip.name }}</span>
+        <span class="trip-tag">{{ trip.name }}</span>
     {% endfor %}
-    <a class="btn" style="width: 30%; margin: 30px 0;" href="{% url 'recipe_download' recipe.id %}">Download pdf</a>
 </div>
 
 <div class="ingredient-wrapper">
@@ -59,7 +62,7 @@
             <form action="{% url 'comment_create' recipe.id %}" method="post">
                 {% csrf_token %}
                 {{ comment_form.as_p }}
-                <input class="btn" type="submit" value="Comment">
+                <input class="btn2" type="submit" value="Comment">
                 <script defer>
                     let one = document.getElementById('id_text').placeholder = "comment ..."
                 </script>

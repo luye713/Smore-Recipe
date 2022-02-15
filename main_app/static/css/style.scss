@@ -83,6 +83,43 @@ ul, li {
     background-color: #FAC02C;
 }
 
+.all {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fac02d;
+    border-radius: 6px;
+    display: inline-flex;
+
+    img {
+        width: 100%;
+        padding: 7px;
+    }
+}
+
+.tool-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #fac02d;
+    font-size: 14px;
+    text-align: center;
+}
+
+.tool-wrapper.active .tool{
+    background-color: #fac02d;
+    img {
+        filter: invert(30%) sepia(10%) saturate(1370%) hue-rotate(37deg) brightness(51%) contrast(86%);
+    }
+}
+
 .signup {
     display: flex;
     justify-content: center;
@@ -122,6 +159,38 @@ ul, li {
 .btn-wrapper {
     display: flex;
     gap: 9px;
+}
+
+.btn-wrapper.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 8px 0;
+
+    .btn {
+        margin: 0;
+        font-size: 14px;
+        padding: 2px 4px;
+        border-radius: 6px;
+        color: white;
+        border-color: white;
+    }
+}
+
+.equip-wrapper {
+    display: flex;
+    gap: 8px;
+
+    .btn {
+        display: flex;
+        width: 35px;
+        height: 35px;
+    }
+
+    img {
+        width: 100%;
+        filter: saturate(0) brightness(2);
+    }
 }
 
 .login,
@@ -236,17 +305,34 @@ ul, li {
 }
 
 .card {
-    flex: 1 1 auto;
-    max-width: 500px;
+    flex: 0 0 auto;
+    width: 410px;
+    position: relative;
 
     img {
         border-radius: 5px;
         width: 100%;
     }
     p {
-        padding: 0 0 0 16px;
+        padding: 0 50px 0 16px;
         margin-top: -35px;
         margin-bottom: 11px;
+    }
+
+    .download-icon {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+    }
+
+    .delete-btn {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+
+        &:hover {
+            filter: brightness(.5);
+        }
     }
 }
 
@@ -275,11 +361,31 @@ ul, li {
     }
 }
 
+.trip-tags {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    text-align: center;
+    gap: 8px;
+    margin: 16px 0;
+
+    .trip-tag {
+        border: 1px solid #fac02d;
+        border-radius: 5px;
+        padding: 4px;
+        font-size: 14px;
+        color: #fac02d;
+    }
+}
+
 .trip-each {
     border: 1px solid #FAC02C;
     border-radius: 10px;
     margin: 25px 0;
     padding: 0 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
     p {
         color: #FAC02C;
     }
