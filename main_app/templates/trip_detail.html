@@ -14,9 +14,9 @@
     <h4>Cooking tools to bring:</h4>
     {% for equipment in equipments %}
         {% if equipment in trip.equipments.all %}
-        <a class="btn2" style="width: 30%;" href="{% url 'unassoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
+        <a class="btn2" href="{% url 'unassoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
         {% else %}
-        <a class="btn" style="width: 30%;" href="{% url 'assoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
+        <a class="btn" href="{% url 'assoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
         {% endif %}
     {% endfor %}
 </div>

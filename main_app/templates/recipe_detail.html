@@ -10,10 +10,10 @@
 
 <div class="btn-wrapper">
     {% for category in categories %}
-        <p class="btn" style="width: 30%;">{{ category.name }}</p>
+        <p class="btn">{{ category.name }}</p>
     {% endfor %}
     {% for equipment in equipments %}
-        <p class="btn" style="width: 30%;">{{ equipment.name }}</p>
+        <p class="btn">{{ equipment.name }}</p>
     {% endfor %}
 </div>
 
@@ -23,6 +23,14 @@
     {% else %}
         <a class="btn2" style="width: 80%;" href="{% url 'trip_create' recipe.id %}">Create Trip to save recipe</a>
     {% endif %}
+</div>
+
+<div>
+    {% for trip in trips_have_recipe %}
+        
+        <span>{{ trip.name }}</span>
+       
+    {% endfor %}
 </div>
 
 <div class="ingredient-wrapper">

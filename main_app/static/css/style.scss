@@ -9,14 +9,22 @@ body {
     background-color: #505A3A;
     color: white;
     font-family: 'Quicksand', sans-serif;
-    padding: 20px;
-    max-width: 900px;
     margin: auto;
 }
 
-main {
+main,
+header {
     flex: 1 0 auto;
+    padding: 20px 20px 0 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
 }
+
+header {
+    flex: 0 0 auto;
+}
+
 
 a {
     color: white;
@@ -34,7 +42,9 @@ ul, li {
     margin: 0;
 }
 
+
 .btn {
+    font-family: 'Quicksand', sans-serif;
     color: #FAC02C;
     border: 1px solid #FAC02C;
     border-radius: 10px;
@@ -43,9 +53,11 @@ ul, li {
     line-height: 22px;
     font-weight: 600;
     text-decoration: none;
+    display: inline-block;
 }
 
 .btn2 {
+    font-family: 'Quicksand', sans-serif;
     color: #232323;
     border: 1px solid #FAC02C;
     border-radius: 10px;
@@ -54,8 +66,7 @@ ul, li {
     line-height: 22px;
     font-weight: 600;
     text-decoration: none;
-    width: 100%;
-    display: block;
+    display: inline-block;
     background-color: #FAC02C;
 }
 
@@ -80,9 +91,6 @@ ul, li {
 
 .nav-wrapper {
     display: flex;
-    align-items: center;
-    margin: -10px;
-    justify-content: center;
 }
 
 .nav {
@@ -91,10 +99,18 @@ ul, li {
     justify-content: space-between;
     align-content: center;
     flex: 1 1 auto;
-    max-width: 600px;
+    
+    .nav {
+        max-width: 400px;
+    }
+
     li {
         display: flex;
         align-items: center;
+
+        a {
+            min-width: 64px;
+        }
     }
 }
 
@@ -108,28 +124,43 @@ ul, li {
     gap: 9px;
 }
 
-.login {
+.login,
+.sign-up {
     background-color: white;
     color: #232323;
-    border-radius: 20px 20px 0px 0px;
-    padding: 20px;
-    margin: -20px;
-    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 20px 40px 20px;
+    margin: -20px 0 0 0;
+    width: 90%;
+    max-width: 400px;
+
+    .btn,
+    .btn2 {
+        width: 100%;
+    }
+    
     p {
         display: flex;
         justify-content: center;
-        height: 30px;
+        height: 40px;
+        margin-bottom: 10px;
         label {
             display: none;
         }
+        
         input {
-            height: 100%;
+            position: relative;
+            height: 40px;
             width: 100%;
+            border-radius: 10px;
+            border: 1px solid #c4c4c4;
+            padding: 10px;
         }
     }
 }
 
-.login h2 {
+.login h2,
+.sign-up h2 {
     margin: 0 0 22px 0;
     text-align: center;
     font-size: 24px;
@@ -147,21 +178,30 @@ ul, li {
     font-weight: normal;
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0;
+}
+
 .card {
-    margin: 35px 0;
+    flex: 1 1 auto;
+
     img {
         border-radius: 5px;
+        width: 100%;
     }
     p {
         padding: 0 0 0 16px;
         margin-top: -35px;
+        margin-bottom: 11px;
     }
 }
 
 .card:hover {
-    img {
-        border: 1px solid white;
-    }
+    opacity: .8;
+    transition: all .2s;
 }
 
 .ingredient-wrapper {
@@ -226,4 +266,13 @@ ul, li {
     .btn {
         margin: 18px 20px;
     }
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: #f8f8f8;
+    color: black;
+    font-size: 12px;
 }
