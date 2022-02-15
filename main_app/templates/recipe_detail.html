@@ -13,7 +13,7 @@
         <p class="btn">{{ category.name }}</p>
     {% endfor %}
     {% for equipment in equipments %}
-        <p class="btn">{{ equipment.name }}</p>
+        <p class="btn"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></p>
     {% endfor %}
 </div>
 

@@ -32,9 +32,9 @@
     {% endif %}
     {% for equipment in equipments %}
         {% if equipment.name == selected_equipment %}
-            <a class="btn2" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
+            <a class="btn2" href="{% url 'recipe_list' selected_category equipment.name %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
         {% else %}
-            <a class="btn" href="{% url 'recipe_list' selected_category equipment.name %}">{{ equipment.name }}</a>
+            <a class="btn" href="{% url 'recipe_list' selected_category equipment.name %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
         {% endif %}
     {% endfor %}
 </div>

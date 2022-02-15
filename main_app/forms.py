@@ -5,7 +5,7 @@ from .models import Trip, Grocery
 class TripForm(ModelForm):
     class Meta:
         model = Trip
-        fields = ['name', 'destination', 'start_date', 'end_date']
+        fields = ['name', 'start_date', 'end_date']
 
 class GroceryForm(ModelForm):
     class Meta:
