@@ -3,6 +3,16 @@ from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
 
+class Grocery(models.Model):
+    name = models.CharField(max_length=100)
+    amount = models.CharField(max_length=100)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"grocery: {self.name}, amount: {self.amount}"
+
+    def get_absolut_url(self):
+        return reverse('grocery_list', kwargs={'pk': self.id})
 
 class Equipment(models.Model):
     name = models.CharField(max_length=50)

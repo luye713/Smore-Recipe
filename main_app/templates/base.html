@@ -19,8 +19,9 @@
                 <ul class="nav">
                     {% if user.is_authenticated %}
                         <li><a href="/" id="logo"><img src="{% static 'assets/logo.svg' %}"></a></li>
-                        <li><a class="nav-trip" href="{% url 'trip_list' %}">My Trips</a></li>
+                        <li><a class="nav-trip" href="{% url 'trip_list' %}">Trips</a></li>
                         <li><a class="nav-recipe" href="{% url 'recipe_list' 'all' 'all' %}">Explore</a></li>
+                        <li><a class="nav-trip" href="{% url 'grocery_list' %}">Grocery</a></li>
                         <li><a href="{% url 'logout' %}">Log<br>Out</a></li>
                     {% endif %}
                 </ul>

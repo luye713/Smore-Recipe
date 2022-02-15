@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<h1>{{ user.username }}'s grocery list:</h1>
+
+<div>
+    <form class="grocery-form" action="{% url 'grocery_create' %}" method="post">
+        {% csrf_token %}
+        <div>
+            {{ grocery_form.as_p }}
+        </div>
+        <div class="grocery-submit">
+            <input type="submit" class="btn" value="Add +">
+        </div>
+        <script defer>
+            let one = document.getElementById('id_name').placeholder = "Item name"
+            let two = document.getElementById('id_amount').placeholder = "amount"
+        </script>
+    </form>
+</div>
+
+<div>
+    {% for grocery in user.grocery_set.all %}
+        <div class="grocery-each">
+            <div class="grocery-info">
+                <p>{{ grocery.name }}</p>
+                <p>-> {{ grocery.amount }}</p>
+            </div>
+            <div class="grocery-link">
+                <a href="{% url 'grocery_delete' grocery.id %}"><p>del</p></a>
+                <a href="{% url 'grocery_update' grocery.id %}"><p>edit</p></a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

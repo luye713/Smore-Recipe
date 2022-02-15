@@ -22,4 +22,9 @@ urlpatterns = [
     # Path for Equipment:
     path('trips/<int:trip_id>/assoc_equipment/<int:equipment_id>/', views.assoc_equipment, name='assoc_equipment'),
     path('trips/<int:trip_id>/unassoc_equipment/<int:equipment_id>/', views.unassoc_equipment, name='unassoc_equipment'),
+    #  Path for Grocery:
+    path('groceries/', views.grocery_list, name='grocery_list'),
+    path('groceries/create', views.grocery_create, name='grocery_create'),
+    path('groceries/<int:pk>/update', views.grocery_update.as_view(), name='grocery_update'),
+    path('groceries/<int:grocery_id>/delete', views.grocery_delete, name='grocery_delete'),
 ]

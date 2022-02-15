@@ -1,4 +1,5 @@
 
+from dataclasses import field
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -6,13 +7,11 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import User, Trip, Recipe, Ingredient, Instruction, Equipment, Category
-from .forms import TripForm
+from .models import Grocery, User, Trip, Recipe, Ingredient, Instruction, Equipment, Category
+from .forms import TripForm, GroceryForm
 # Download pdf:
 from io import BytesIO
-from io import StringIO
 from django.http import HttpResponse
-from django.template import Context
 from django.template.loader import get_template
 from django.template.loader import render_to_string
 from xhtml2pdf import pisa
@@ -130,6 +129,8 @@ def recipe_delete(request, trip_id, recipe_id):
     return redirect('trip_detail', trip_id=trip_id)
 
 
+
+# DOWNLOAD PDF:
 def html_to_pdf(template_src, context_dict={}):
     template = get_template(template_src)
     html  = template.render(context_dict)
@@ -139,6 +140,7 @@ def html_to_pdf(template_src, context_dict={}):
         return HttpResponse(result.getvalue(), content_type='application/pdf')
     return None
 
+@login_required
 def recipe_download(request, recipe_id):
     def get(request, *args, **kwargs):
         recipe = Recipe.objects.get(id=recipe_id)
@@ -151,10 +153,39 @@ def recipe_download(request, recipe_id):
 
 
 # EQUIPMENT
+@login_required
 def assoc_equipment(request, trip_id, equipment_id):
     Trip.objects.get(id=trip_id).equipments.add(equipment_id)
     return redirect('trip_detail', trip_id=trip_id)
 
+@login_required
 def unassoc_equipment(request, trip_id, equipment_id):
     Trip.objects.get(id=trip_id).equipments.remove(equipment_id)
     return redirect('trip_detail', trip_id=trip_id)
+
+
+
+# GROCERIES:
+@login_required
+def grocery_list(request):
+    grocery_form = GroceryForm()
+    return render(request, 'grocery_list.html', { 'grocery_form': grocery_form })
+
+@login_required
+def grocery_create(request):
+    form = GroceryForm(request.POST)
+    if form.is_valid():
+        new_grocery = form.save(commit=False)
+        new_grocery.user_id = request.user.id
+        new_grocery.save()
+    return redirect('grocery_list')
+
+class grocery_update(UpdateView):
+    model = Grocery
+    fields = ['name', 'amount']
+    success_url = '/groceries/'
+
+@login_required
+def grocery_delete(request, grocery_id):
+    Grocery.objects.get(id=grocery_id).delete()
+    return redirect('grocery_list')
