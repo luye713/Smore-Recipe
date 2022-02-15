@@ -10,7 +10,6 @@ class Grocery(models.Model):
 
     def __str__(self):
         return f"grocery: {self.name}, amount: {self.amount}"
-
     def get_absolut_url(self):
         return reverse('grocery_list', kwargs={'pk': self.id})
 
@@ -33,7 +32,6 @@ class Recipe(models.Model):
 
     def __str__(self):
         return f"name: {self.name}"
-
     def get_absolut_url(self):
         return reverse('recipe_detail', kwargs={'recipe_id': self.id})
 
@@ -51,6 +49,15 @@ class Instruction(models.Model):
     def __str__(self):
         return f"instruction: {self.text}"
 
+class Comment(models.Model):
+    text = models.TextField(max_length=1000)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"comment: {self.text}"
+    def get_absolut_url(self):
+        return reverse('home', kwargs={'comment_id': self.id})
 
 class Trip(models.Model):
     name = models.CharField(max_length=50)
