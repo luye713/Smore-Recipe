@@ -61,7 +61,6 @@ class Comment(models.Model):
 
 class Trip(models.Model):
     name = models.CharField(max_length=50)
-    destination = models.CharField(max_length=100)
     start_date = models.DateField('Start day')
     end_date = models.DateField('End day')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -69,7 +68,8 @@ class Trip(models.Model):
     equipments = models.ManyToManyField(Equipment)
 
     def __str__(self):
-        return f"trip name: {self.name}, destination: {self.destination}"
+        return f"trip name: {self.name}"
+
     def get_absolut_url(self):
         return reverse('trip_detail', kwargs={'trip_id': self.id})
 

@@ -148,8 +148,8 @@ def html_to_pdf(template_src, context_dict={}):
 def recipe_download(request, recipe_id):
     def get(request, *args, **kwargs):
         recipe = Recipe.objects.get(id=recipe_id)
-        open('main_app/recipe_pdf.html', "w").write(render_to_string('main_app/recipe_pdf.html', { 'recipe': recipe }))
-        pdf = html_to_pdf('main_app/recipe_pdf.html', { 'recipe': recipe })
+        open('recipe_pdf.html', "w").write(render_to_string('recipe_pdf.html', { 'recipe': recipe }))
+        pdf = html_to_pdf('recipe_pdf.html', { 'recipe': recipe })
         return HttpResponse(pdf, content_type='application/pdf')
     
     return get(request)

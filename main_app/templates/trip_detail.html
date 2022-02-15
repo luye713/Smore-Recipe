@@ -5,31 +5,36 @@
 
 <div>
     <h1>{{ trip.name }}</h1>
+    <h4>{{ trip.start_date }} - {{ trip.end_date }}</h4>
     <div>
         <a class="btn" href="{% url 'trip_delete' trip.id %}" >delete this trip</a>
     </div>
-    <h3>to {{ trip.destination }}</h3>
-    <h4>Begin on {{ trip.start_date }}</h4>
-    <h4>End on {{ trip.end_date }}</h4>
     <h4>Cooking tools to bring:</h4>
+    
+    <div class="btn-wrapper">
     {% for equipment in equipments %}
         {% if equipment in trip.equipments.all %}
-        <a class="btn2" href="{% url 'unassoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
+        <div class="tool-wrapper active">
         {% else %}
-        <a class="btn" href="{% url 'assoc_equipment' trip.id equipment.id %}">{{ equipment.name }}</a>
+        <div class="tool-wrapper">
         {% endif %}
+            <a class="tool" href="{% url 'assoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+        </div>
     {% endfor %}
+
+    
+    </div>
 </div>
 
-<div>
-    <h3 style="margin-bottom: -20px;">Saved Recipe:</h3>
+<div class="cards">
     {% for recipe in trip.recipes.all %}
         <div class="card">
-            <a class="btn2" href="{% url 'recipe_delete' trip.id recipe.id %}">delete this recipe</a>
+            <a class="delete-btn" href="{% url 'recipe_delete' trip.id recipe.id %}"><img src="{% static 'assets/cancel' %}.svg"></a>
             <a href="{% url 'recipe_detail' recipe.id %}">
                 <img src="{% static 'assets/foodlist/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
                 <p>{{ recipe.name }}</p>
             </a>
+            <a class="download-icon" href="{% url 'recipe_download' recipe.id %}"><img src="{% static 'assets/download' %}.svg"></a>
         </div>
     {% endfor %}
 </div>
