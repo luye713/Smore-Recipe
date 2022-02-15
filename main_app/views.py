@@ -7,8 +7,8 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Grocery, User, Trip, Recipe, Ingredient, Instruction, Equipment, Category
-from .forms import TripForm, GroceryForm
+from .models import Grocery, User, Trip, Recipe, Ingredient, Instruction, Equipment, Category, Comment
+from .forms import TripForm, GroceryForm, CommentForm
 # Download pdf:
 from io import BytesIO
 from django.http import HttpResponse
@@ -106,12 +106,14 @@ def recipe_detail(request, recipe_id):
     equipments = Equipment.objects.filter(id__in = recipe.equipments.all().values_list('id'))
     trips = Trip.objects.filter(user=request.user)
     trips_have_recipe = Trip.objects.filter(recipes__id=recipe_id)
+    comment_form = CommentForm()
     return render(request, 'recipe_detail.html', {
         'recipe': recipe,
         'categories': categories,
         'equipments': equipments,
         'trips': trips,
-        'trips_have_recipe': trips_have_recipe
+        'trips_have_recipe': trips_have_recipe,
+        'comment_form': comment_form,
     })
 
 @login_required
@@ -191,3 +193,23 @@ class grocery_update(UpdateView):
 def grocery_delete(request, grocery_id):
     Grocery.objects.get(id=grocery_id).delete()
     return redirect('grocery_list')
+
+
+
+# COMMENTS:
+
+@login_required
+def comment_create(request, recipe_id):
+    form = CommentForm(request.POST)
+    if form.is_valid():
+        new_comment = form.save(commit=False)
+        new_comment.user_id = request.user.id
+        new_comment.recipe_id = recipe_id
+        new_comment.save()
+    return redirect('recipe_detail', recipe_id=recipe_id)
+
+@login_required
+def comment_delete(request, recipe_id, comment_id):
+    Comment.objects.get(id=comment_id).delete()
+    return redirect('recipe_detail', recipe_id=recipe_id)
+
