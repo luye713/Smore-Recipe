@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Edit item</h1>
+
+<form class="trip-create" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn" type="submit" value="Update">
+</form>
+
+{% endblock %}

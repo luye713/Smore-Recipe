@@ -268,6 +268,53 @@ ul, li {
     }
 }
 
+.grocery-each {
+    border: 1px solid #FAC02C;
+    border-radius: 10px;
+    margin: 25px 0;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    p {
+        color: #FAC02C;
+        margin: 10px 0;
+    }
+    .grocery-link {
+        a {
+            p {
+                color: white;
+            }
+        }
+    }
+}
+
+.grocery-form {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    label {
+        display: none;
+    }
+    input {
+        height: 30px;
+        background-color: transparent;
+        color: #FAC02C;
+        border-radius: 5px;
+        border: 1px solid #FAC02C;
+        width: 90%;
+    }
+    ::placeholder {
+        color: #FAC02C;
+        opacity: 0.7;
+        padding: 0 0 0 2px;
+    }
+    .grocery-submit {
+        display: flex;
+        align-items: flex-end;
+        input {
+            margin: 16px 10px 16px 0;
+        }
+    }
+
 footer {
     width: 100%;
     padding: 10px;
