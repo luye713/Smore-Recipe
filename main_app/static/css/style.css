@@ -1,285 +1,285 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #505A3A;
-  color: white;
-  font-family: 'Quicksand', sans-serif;
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #505A3A;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	margin: auto;
 }
 
-main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+main,
+header {
+	flex: 1 0 auto;
+	padding: 20px 20px 0 20px;
+	max-width: 900px;
+	width: 100%;
+	margin: auto;
+}
+
+header {
+	flex: 0 0 auto;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 footer.page-footer {
-  padding-top: 0;
-  text-align: right;
+	padding-top: 0;
+	text-align: right;
 }
 
 ul, li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .btn {
-  color: #FAC02C;
-  border: 1px solid #FAC02C;
-  border-radius: 10px;
-  padding: 8px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 600;
-  text-decoration: none;
+	font-family: 'Quicksand', sans-serif;
+	color: #FAC02C;
+	border: 1px solid #FAC02C;
+	border-radius: 10px;
+	padding: 8px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	display: inline-block;
 }
 
 .btn2 {
-  color: #232323;
-  border: 1px solid #FAC02C;
-  border-radius: 10px;
-  padding: 8px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 600;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  background-color: #FAC02C;
+	font-family: 'Quicksand', sans-serif;
+	color: #232323;
+	border: 1px solid #FAC02C;
+	border-radius: 10px;
+	padding: 8px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #FAC02C;
 }
 
 .btn3 {
-  color: #232323;
-  border: 1px solid #FAC02C;
-  border-radius: 10px;
-  padding: 8px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 600;
-  text-decoration: none;
-  display: block;
-  background-color: #FAC02C;
+	color: #232323;
+	border: 1px solid #FAC02C;
+	border-radius: 10px;
+	padding: 8px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	background-color: #FAC02C;
 }
 
 .signup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
 }
 
 .nav-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: -10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+	display: flex;
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  max-width: 600px;
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	align-content: center;
+	flex: 1 1 auto;
+}
+
+.nav .nav {
+	max-width: 400px;
 }
 
 .nav li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	display: flex;
+	align-items: center;
+}
+
+.nav li a {
+	min-width: 64px;
 }
 
 .nav a:hover {
-  text-decoration: underline;
-  font-weight: 600;
+	text-decoration: underline;
+	font-weight: 600;
 }
 
 .btn-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 9px;
+	display: flex;
+	gap: 9px;
 }
 
-.login {
-  background-color: white;
-  color: #232323;
-  border-radius: 20px 20px 0px 0px;
-  padding: 20px;
-  margin: -20px;
-  width: 100%;
+.login,
+.sign-up {
+	background-color: white;
+	color: #232323;
+	border-radius: 20px 20px 0 0;
+	padding: 20px 20px 40px 20px;
+	margin: -20px 0 0 0;
+	width: 90%;
+	max-width: 400px;
 }
 
-.login p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 30px;
+.login .btn,
+  .login .btn2,
+  .sign-up .btn,
+  .sign-up .btn2 {
+	width: 100%;
 }
 
-.login p label {
-  display: none;
+.login p,
+  .sign-up p {
+	display: flex;
+	justify-content: center;
+	height: 40px;
+	margin-bottom: 10px;
 }
 
-.login p input {
-  height: 100%;
-  width: 100%;
+.login p label,
+    .sign-up p label {
+	display: none;
 }
 
-.login h2 {
-  margin: 0 0 22px 0;
-  text-align: center;
-  font-size: 24px;
-  font-weight: normal;
+.login p input,
+    .sign-up p input {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid #c4c4c4;
+	padding: 10px;
+}
+
+.login h2,
+.sign-up h2 {
+	margin: 0 0 22px 0;
+	text-align: center;
+	font-size: 24px;
+	font-weight: normal;
 }
 
 .login_page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .login_page h1 {
-  font-size: 24px;
-  font-weight: normal;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	margin: 20px 0;
 }
 
 .card {
-  margin: 35px 0;
+	flex: 1 1 auto;
 }
 
 .card img {
-  border-radius: 5px;
+	border-radius: 5px;
+	width: 100%;
 }
 
 .card p {
-  padding: 0 0 0 16px;
-  margin-top: -35px;
+	padding: 0 0 0 16px;
+	margin-top: -35px;
+	margin-bottom: 11px;
 }
 
-.card:hover img {
-  border: 1px solid white;
+.card:hover {
+	opacity: .8;
+	transition: all .2s;
 }
 
 .ingredient-wrapper h4 {
-  margin: 20px 0 5px 0;
+	margin: 20px 0 5px 0;
 }
 
 .ingredient-wrapper li {
-  list-style-type: disc;
-  margin-left: 20px;
+	list-style-type: disc;
+	margin-left: 20px;
 }
 
 .instruction-wrapper h4 {
-  margin: 20px 0 5px 0;
+	margin: 20px 0 5px 0;
 }
 
 .instruction-wrapper li {
-  list-style-type: nth;
-  margin-left: 20px;
+	list-style-type: nth;
+	margin-left: 20px;
 }
 
 .trip-each {
-  border: 1px solid #FAC02C;
-  border-radius: 10px;
-  margin: 25px 0;
-  padding: 0 20px;
+	border: 1px solid #FAC02C;
+	border-radius: 10px;
+	margin: 25px 0;
+	padding: 0 20px;
 }
 
 .trip-each p {
-  color: #FAC02C;
+	color: #FAC02C;
 }
 
 .trip-each:hover {
-  background-color: #FAC02C;
+	background-color: #FAC02C;
 }
 
 .trip-each:hover p {
-  color: black;
+	color: black;
 }
 
 .trip-create p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .trip-create p label {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 .trip-create p input {
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid white;
-  background-color: transparent;
-  color: white;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: transparent;
+	color: white;
 }
 
 .trip-create .btn {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .recipe-cate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	display: flex;
 }
 
 .recipe-cate .btn {
-  margin: 18px 20px;
+	margin: 18px 20px;
 }
-/*# sourceMappingURL=style.css.map */
+
+footer {
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	background: #f8f8f8;
+	color: black;
+	font-size: 12px;
+}

@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<div class="login_page">
+  <h1>S'more Recipes</h1>
+  <div id="camping_img"><img src="{% static 'assets/camping.svg' %}"></div>
+  <div class="sign-up">
+    <h2>Sign Up</h2>
 
-<h1>Sign Up</h1>
+    {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
 
-{% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
-
-<form method="post" action="{% url 'signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="signup">
-</form>
-
+    <form method="post" action="{% url 'signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" class="btn2" value="signup">
+    </form>
+  </div>
+</div>
 {% endblock %}

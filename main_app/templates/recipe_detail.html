@@ -10,10 +10,10 @@
 
 <div class="btn-wrapper">
     {% for category in categories %}
-        <p class="btn" style="width: 30%;">{{ category.name }}</p>
+        <p class="btn">{{ category.name }}</p>
     {% endfor %}
     {% for equipment in equipments %}
-        <p class="btn" style="width: 30%;">{{ equipment.name }}</p>
+        <p class="btn">{{ equipment.name }}</p>
     {% endfor %}
 </div>
 
@@ -26,6 +26,11 @@
 </div>
 
 <div>
+    {% for trip in trips_have_recipe %}
+        
+        <span>{{ trip.name }}</span>
+       
+    {% endfor %}
     <a class="btn" style="width: 30%; margin: 30px 0;" href="{% url 'recipe_download' recipe.id %}">Download pdf</a>
 </div>
 
