@@ -26,11 +26,15 @@
     $(function () {
         $("#id_end_date").datepicker();
     });
-    
+    $("#id_start_date").datepicker({
+        format: 'yyyy-mm-dd'
+    }); 
+    $("#id_end_date").datepicker({
+        format: 'yyyy-mm-dd'
+    }); 
     document.getElementById('id_name').value = `{{ trip.name }}`
-    document.getElementById('id_start_date').value = `{{ trip.start_date }}`
-    document.getElementById('id_end_date').value = `{{ trip.end_date }}`
-    
+    document.getElementById('id_start_date').value = `{{ trip.start_date|date:"Y-m-d" }}`
+    document.getElementById('id_end_date').value = `{{ trip.end_date|date:"Y-m-d"  }}`
 </script>
 
 {% endblock %}
