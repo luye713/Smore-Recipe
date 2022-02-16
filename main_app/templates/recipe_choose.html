@@ -5,7 +5,7 @@
 <a href="{% url 'recipe_detail' recipe.id %}"><img src="{% static 'assets/cancel' %}.svg"></a>
 <br>
 
-<h1>Select a trip to add the recipe to:</h1>
+<h1 class="select_trip">Select a trip to add the recipe to:</h1>
 <a class="btn2" href="{% url 'trip_create' recipe.id %}">+ New trip</a>
 
 {% if trips.count %}
@@ -17,7 +17,7 @@
         </div>
     {% endfor %}
 {% else %}
-<img src="{% static 'assets/trip.svg' %}">
+<img id="notrip" src="{% static 'assets/trip.svg' %}">
 {% endif %}
 
 
