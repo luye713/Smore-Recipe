@@ -6,11 +6,11 @@
 
 ### About:
 
-S'more Recipe is a Group Project for the General Assembly's Collabathon between Software Engineer Immersive student and UX Design Immersive student. GA's Collabathon create opportunity for Software developer and Designer to share their skills and work in a team emulate real world work environment to create a project together.
+S'more Recipe is a Group Project for the General Assembly's Collabathon between Software Engineer Immersive student and UX Design Immersive student. GA's Collabathon create opportunity for Software developer and Designer to share their skills and work in a team emulate real world work environment to create a project together.\
+&nbsp;\
+S'more Recipe was created as a one-stop-shop for people who love to go camping that looking for a app to help them plan for their trips.\
 &nbsp;
-S'more Recipe was created as a one-stop-shop for people who love to go camping that looking for a app to help them plan for their trips.
-&nbsp;
-The app enable user to create trip that they are planning to go, update what equipment they want to bring to the trip, explore a list of recipe that they can use in their camping, and have a quick and easy grocery list to help them prepare for the trip.
+The app enable user to create trip that they are planning to go, update what equipment they want to bring to the trip, explore a list of recipe that they can use in their camping, and have a quick and easy grocery list to help them prepare for the trip.\
 
 ### Usage:
 
@@ -78,27 +78,27 @@ Technologies:
 
 ### User Persona:
 
-Alana\s\s
-No-frill camper.\s\s
-Cooks simple meals, but not just burgers and hot dogs.\s\s
-Doesn’t want to bring a lot of stuff with her, ideally one cooking tool.\s\s
+Alana\
+No-frill camper.\
+Cooks simple meals, but not just burgers and hot dogs.\
+Doesn’t want to bring a lot of stuff with her, ideally one cooking tool.\
 
 ### Needs:
 
-Quick but delicious Meals.\s\s
-Switch up between burgers, hot dogs with home cooked meals.\s\s
-Access recipes offline at camp site.\s\s
+Quick but delicious Meals.\
+Switch up between burgers, hot dogs with home cooked meals.\
+Access recipes offline at camp site.\
 
 ### Frustration:
 
-Wants to plan better meals for camping but don’t know how to do it minimally.\s\s
-Time consuming to Google recipes and manually save them for every trip.\s\s
+Wants to plan better meals for camping but don’t know how to do it minimally.\
+Time consuming to Google recipes and manually save them for every trip.\
 
 ### User Testing Notes 2022-02-11
 
-Ricardo: Explore option is key for me to see more recipes. I’d want to go to ‘explore’ from my planned trips too.\s\s
-Eric: Add trip function was inconsistent at the recipe page compared to the ‘My trips’ page.\s\s
-I don’t like to be constrained with the type of cooking tools usually. I want to explore and add any recipes to my trips folder and then decide what tools I need to bring to the camping trip.\s\s
+Ricardo: Explore option is key for me to see more recipes. I’d want to go to ‘explore’ from my planned trips too.\
+Eric: Add trip function was inconsistent at the recipe page compared to the ‘My trips’ page.\
+I don’t like to be constrained with the type of cooking tools usually. I want to explore and add any recipes to my trips folder and then decide what tools I need to bring to the camping trip.\
 
 ### Entity Relationship Diagram:
 
@@ -117,11 +117,11 @@ Distributed under the MIT License.
 ### Contact:
 
 Developer
-[Lu Ye](https://github.com/luye713)\s\s
-[Josh Nguyen](https://joshnguyentoronto.com)\s\s
+[Lu Ye](https://github.com/luye713)\
+[Josh Nguyen](https://joshnguyentoronto.com)\
 
 Designer:
-[May Wu](https://www.google.com/)\s\s
-[Paula Abejero](https://www.google.com/)\s\s
-[Josh Boissiere](https://www.google.com/)\s\s
-[Rabia Malik Jamil](https://www.google.com/)\s\s
+[May Wu](https://www.google.com/)\
+[Paula Abejero](https://www.google.com/)\
+[Josh Boissiere](https://www.google.com/)\
+[Rabia Malik Jamil](https://www.google.com/)\
