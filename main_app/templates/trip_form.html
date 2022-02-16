@@ -16,6 +16,19 @@
         }
     </style>
     {{ trip_form.as_p }}
+    
+    <div class="btn-wrapper">
+        {% for equipment in equipments %}
+            {% if equipment in trip.equipments.all %}
+                <div class="tool-wrapper active">
+            {% else %}
+                <div class="tool-wrapper">
+            {% endif %}
+                <p class="tool2"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg" alt="tools"></p>
+            </div>
+        {% endfor %}
+    </div>
+
     <input class="btn" type="submit" value="Create">
 </form>
 

@@ -28,8 +28,8 @@
                 <p>-> {{ grocery.amount }}</p>
             </div>
             <div class="grocery-link">
-                <a href="{% url 'grocery_delete' grocery.id %}"><p>del</p></a>
-                <a href="{% url 'grocery_update' grocery.id %}"><p>edit</p></a>
+                <a href="{% url 'grocery_update' grocery.id %}"><img width="15px" src="{% static 'assets/edit' %}.svg"></a>
+                <a href="{% url 'grocery_delete' grocery.id %}"><img width="17px" src="{% static 'assets/delete' %}.svg"></a>
             </div>
         </div>
     {% endfor %}
