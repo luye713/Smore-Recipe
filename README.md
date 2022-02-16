@@ -1,10 +1,10 @@
-# S'more Recipe
+<h1 align="center">S'more Recipes</h1>
 
 <p align="center">
     <img alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png" />
 </p>
 
-### Plan your next camping trip
+<h3 align="center">Plan your next camping trip</h3>
 
 <br />
 
@@ -76,30 +76,54 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 ### Languages and Tools:
 
-<img align="left" alt="visualstudio" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
-Visual Studio Code
-<img align="left" alt="git" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
-Version control Git
-<img align="left" alt="github" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
-GitHub
-<img align="left" alt="terminal" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
-Zsh
-<img align="left" alt="html" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
-HTML 5
-<img align="left" alt="css" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
-CSS 3
-<img align="left" alt="sass" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />
-SASS
-<img align="left" alt="javascript" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
-JavaScript
-<img align="left" alt="python" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
-Python
-<img align="left" alt="django" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" />
-Django
-<img align="left" alt="SQL" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
-SQL
-<img align="left" alt="PostgreSQL" width="30px" height="30px" src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png" />
-PostgreSQL
+<p>
+    <img alt="visualstudio" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+    Visual Studio Code
+</p>
+<p>
+    <img alt="git" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+    Version control Git
+</p>
+<p>
+    <img alt="github" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+    GitHub
+</p>
+<p>
+    <img alt="terminal" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
+    Zsh
+</p>
+<p>
+    <img alt="html" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+    HTML 5
+</p>
+<p>
+    <img alt="css" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+    CSS 3
+</p>
+<p>
+    <img alt="sass" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />
+    SASS
+</p>
+<p>
+    <img alt="javascript" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
+    JavaScript
+</p>
+<p>
+    <img alt="python" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
+    Python
+</p>
+<p>
+    <img alt="django" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" />
+    Django
+</p>
+<p>
+    <img alt="SQL" width="24px" height="24px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
+    SQL
+</p>
+<p>
+    <img alt="PostgreSQL" width="24px" height="24px" src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png" />
+    PostgreSQL
+</p>
 
 <br />
 
@@ -107,14 +131,22 @@ PostgreSQL
 
 ### Technologies:
 
-<img align="left" alt="Trello" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
-Tasks Manager - Trello Board
-<img align="left" alt="Lucid" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
-Database Model - Lucid Chart
-<img align="left" alt="Figma" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
-Wireframe and Prototype - Figma + FigJam
-<img align="left" alt="Whimsical" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
-User flow - Whimsical
+<p>
+    <img alt="Trello" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
+    Tasks Manager - Trello Board
+</p>
+<p>
+    <img alt="Lucid" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
+    Database Model - Lucid Chart
+</p>
+<p>
+    <img alt="Figma" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
+    Wireframe and Prototype - Figma + FigJam
+</p>
+<p>
+    <img alt="Whimsical" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
+    User flow - Whimsical
+</p>
 
 
 <br />
