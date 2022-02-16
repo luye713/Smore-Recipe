@@ -2,38 +2,47 @@
 {% block content %}
 {% load static %}
 
+
 <a href="{% url 'recipe_list' 'all' 'all' %}"><img src="{% static 'assets/goback' %}.svg"></a>
 
+
 <h3>{{ recipe.name }}</h3>
-<div>
+<div class="recipe-detail-img">
     <img src="{% static 'assets/fooddetail/' %}{{ recipe.name|cut:" "|cut:"&" }}.jpg">
 </div>
 
-
-<div class="btn-wrapper recipe">
-    <div class="cat-wrapper">
-    {% for category in categories %}
-        <p class="btn">{{ category.name }}</p>
-    {% endfor %}
-    </div>
-    <div class="equip-wrapper">
-    {% for equipment in equipments %}
-        <p class="btn"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></p>
-    {% endfor %}
+<div class="recipe-detail-category">
+    <div class="recipe-detail-cat-container">
+        <div class="btn-wrapper recipe-detail-cat">
+            <div class="cat-wrapper">
+                {% for category in categories %}
+                <p class="btn">{{ category.name }}</p>
+                {% endfor %}
+            </div>
+            <div class="equip-wrapper">
+                {% for equipment in equipments %}
+                <p class="btn"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="recipe-detail-download">
+            <a class="download-icon" href="{% url 'recipe_download' recipe.id %}"><img src="{% static 'assets/download' %}.svg"></a>
+        </div>
     </div>
 </div>
-
 
 
 <div class="trip-tags">
-
     <a class="btn2" href="{% url 'recipe_choose' recipe.id %}">+ Add to Trip!</a>
-
-    <p>Trips that added this recipe:</p>
-    {% for trip in trips_have_recipe %}
-        <span class="trip-tag">{{ trip.name }}</span>
-    {% endfor %}
+    {% if trips_have_recipe.count %}
+        <p>This recipe is in:</p>
+        {% for trip in trips_have_recipe %}
+            <a class="trip-tag" href="{% url 'trip_detail' trip.id %}">{{ trip.name }}</a>
+        {% endfor %}
+    {% endif %}
 </div>
+
+
 
 <div class="ingredient-wrapper">
     <h4>Ingredients:</h4>

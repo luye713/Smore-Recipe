@@ -14,7 +14,6 @@
 </head>
 <body>
     <header class="navbar-fixed">
-        <nav>
             <div class="nav-wrapper">
                 <ul class="nav">
                     {% if user.is_authenticated %}
@@ -23,12 +22,11 @@
                             <li><a class="nav-trip" href="{% url 'trip_list' %}">My Trips</a></li>
                             <li><a class="nav-recipe" href="{% url 'recipe_list' 'all' 'all' %}">Explore</a></li>
                             <li><a class="nav-trip" href="{% url 'grocery_list' %}">Grocery</a></li>
-                            <li><a href="{% url 'logout' %}">Log out</a></li>
+                            <li><a style="padding-top: 5px;" href="{% url 'logout' %}"><img width="16px" src="{% static 'assets/logout.svg' %}"></a></li>
                         </ul>
                     {% endif %}
                 </ul>
             </div>
-        </nav>
     </header>
 
     <main class="container">

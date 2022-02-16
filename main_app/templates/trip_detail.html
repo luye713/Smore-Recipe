@@ -13,17 +13,15 @@
     <h4>Cooking tools to bring:</h4>
     
     <div class="btn-wrapper">
-    {% for equipment in equipments %}
-        {% if equipment in trip.equipments.all %}
-        <div class="tool-wrapper active">
-        {% else %}
-        <div class="tool-wrapper">
-        {% endif %}
-            <a class="tool" href="{% url 'assoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
-        </div>
-    {% endfor %}
-
-    
+        {% for equipment in equipments %}
+            {% if equipment in trip.equipments.all %}
+            <div class="tool-wrapper active">
+            {% else %}
+            <div class="tool-wrapper">
+            {% endif %}
+                <a class="tool" href="{% url 'assoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+            </div>
+        {% endfor %}
     </div>
 </div>
 
