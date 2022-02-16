@@ -2,17 +2,47 @@
 
 ![logo](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png)
 
-## Place to plan your next camping trip
+### Plan your next camping trip
+
+<br />
+
+---
 
 ### About:
 
 S'more Recipe is a Group Project for the General Assembly's Collabathon between Software Engineer Immersive student and UX Design Immersive student. GA's Collabathon create opportunity for Software developer and Designer to share their skills and work in a team emulate real world work environment to create a project together.\
 &nbsp;\
 S'more Recipe was created as a one-stop-shop for people who love to go camping that looking for a app to help them plan for their trips.\
-&nbsp;
-The app enable user to create trip that they are planning to go, update what equipment they want to bring to the trip, explore a list of recipe that they can use in their camping, and have a quick and easy grocery list to help them prepare for the trip.\
+&nbsp;\
+The app enable user to create trip that they are planning to go, update what equipment they want to bring to the trip, explore a list of recipe that they can use in their camping, and have a quick and easy grocery list to help them prepare for the trip.
 
-### Usage:
+<br />
+
+---
+
+## Outcome:
+
+This Collabathon project help the SEI and UXDI students gain direct experiences that is relevant to our future carrer.\
+Understand and appreciate the relationship between developer and designer.\
+Accomplish the osftware development process with a diverse, talented team.\
+Understanding constraints, realities and making decisions for the sake of delivering an MVP to present to stakeholders.
+
+<br />
+
+---
+
+## Review:
+![review1](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review1.png)
+![review2](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review2.png)
+![review3](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review3.png)
+![review4](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review4.png)
+![review5](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review5.png)
+
+<br />
+
+---
+
+## Usage:
 
 1. Log in or Sign up new account to get started
 2. Create Trip, update Trip information, delete Trip
@@ -22,14 +52,7 @@ The app enable user to create trip that they are planning to go, update what equ
 6. Create a Grocery list for easy shopping your item for your trip
 7. Log out
 
-### Outcome:
-
-- This project help the SEI and UXDI students gain direct experiences that is relevant to our future carrer.
-- Understand and appreciate the relationship between developer and designer
-- Accomplish the osftware development process with a diverse, talented team.
-- Understanding constraints, realities and making decisions for the sake of delivering an MVP to present to stakeholders.
-
-### Role:
+## Role:
 
 | Role      | Student           | Tasks                                                                                                              |
 | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -40,25 +63,36 @@ The app enable user to create trip that they are planning to go, update what equ
 | Designer  | Josh Boissiere    | Iterate wireframes, User flow, Recipe Table - Google Doc, Excel                                                    |
 | Designer  | Rabia Malik Jamil | Pitch deck, User flow, Competitive analysis, Problem space, Persona, Prototype                                     |
 
-### Build with:
+## Languages and Tools:
 
-Tech Stack:
+<img align="left" alt="visualstudio" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+<img align="left" alt="git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+<img align="left" alt="github" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+<img align="left" alt="terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
+<img align="left" alt="html" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+<img align="left" alt="css" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+<img align="left" alt="sass" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />
+<img align="left" alt="javascript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
+<img align="left" alt="python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
+<img align="left" alt="django" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" />
+<img align="left" alt="mongodb" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" />
+<img align="left" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
+<img align="left" alt="PostgreSQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgesql/postgresql.png" />
 
-- Python3
-- Django
-- HTML5
-- CSS3
-- SASS
-- JavaScript
-- xhtml2pdf
+<br />
 
-Technologies:
+---
 
-- Version control: Git + GitHub
+## Technologies:
+
 - Tasks manager: Trello board
 - Database Model: Lucid Chart
 - Wireframe and Prototype: Figma + FigJam
 - User flow: Whimsical
+
+<br />
+
+---
 
 ### User flow:
 
@@ -76,33 +110,41 @@ Technologies:
 
 ![user flow diagram](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/user-flow.png)
 
-### User Persona:
+#### User Persona:
 
 Alana\
 No-frill camper.\
 Cooks simple meals, but not just burgers and hot dogs.\
-Doesn’t want to bring a lot of stuff with her, ideally one cooking tool.\
+Doesn’t want to bring a lot of stuff with her, ideally one cooking tool.
 
-### Needs:
+#### Needs:
 
 Quick but delicious Meals.\
 Switch up between burgers, hot dogs with home cooked meals.\
-Access recipes offline at camp site.\
+Access recipes offline at camp site.
 
-### Frustration:
+#### Frustration:
 
 Wants to plan better meals for camping but don’t know how to do it minimally.\
-Time consuming to Google recipes and manually save them for every trip.\
+Time consuming to Google recipes and manually save them for every trip.
 
-### User Testing Notes 2022-02-11
+#### User Testing Notes 2022-02-11
 
 Ricardo: Explore option is key for me to see more recipes. I’d want to go to ‘explore’ from my planned trips too.\
 Eric: Add trip function was inconsistent at the recipe page compared to the ‘My trips’ page.\
-I don’t like to be constrained with the type of cooking tools usually. I want to explore and add any recipes to my trips folder and then decide what tools I need to bring to the camping trip.\
+I don’t like to be constrained with the type of cooking tools usually. I want to explore and add any recipes to my trips folder and then decide what tools I need to bring to the camping trip.
+
+<br />
+
+---
 
 ### Entity Relationship Diagram:
 
 ![database ERD diagram](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/erd.png)
+
+<br />
+
+---
 
 ### Icebox:
 
@@ -110,18 +152,26 @@ I don’t like to be constrained with the type of cooking tools usually. I want 
 - Enable commenting when user view Recipe (completed)
 - Create a Grocery List where user can keep track ingredient to buy (completed)
 
+<br />
+
+---
+
 ### License:
 
 Distributed under the MIT License.
 
+<br />
+
+---
+
 ### Contact:
 
-Developer
+Developer:\
 [Lu Ye](https://github.com/luye713)\
-[Josh Nguyen](https://joshnguyentoronto.com)\
+[Josh Nguyen](https://joshnguyentoronto.com)
 
-Designer:
+Designer:\
 [May Wu](https://www.google.com/)\
 [Paula Abejero](https://www.google.com/)\
 [Josh Boissiere](https://www.google.com/)\
-[Rabia Malik Jamil](https://www.google.com/)\
+[Rabia Malik Jamil](https://www.google.com/)
