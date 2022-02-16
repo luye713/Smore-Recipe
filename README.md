@@ -1,6 +1,6 @@
 # S'more Recipe
 
-![logo](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png)
+<img align="center" alt="Smore Recipes icon" width="100px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png" />
 
 ### Plan your next camping trip
 
@@ -20,7 +20,7 @@ The app enable user to create trip that they are planning to go, update what equ
 
 ---
 
-## Outcome:
+### Outcome:
 
 This Collabathon project help the SEI and UXDI students gain direct experiences that is relevant to our future carrer.\
 Understand and appreciate the relationship between developer and designer.\
@@ -31,7 +31,8 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 ---
 
-## Review:
+### Review:
+
 ![review1](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review1.png)
 ![review2](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review2.png)
 ![review3](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review3.png)
@@ -42,7 +43,7 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 ---
 
-## Usage:
+### Usage:
 
 1. Log in or Sign up new account to get started
 2. Create Trip, update Trip information, delete Trip
@@ -52,7 +53,11 @@ Understanding constraints, realities and making decisions for the sake of delive
 6. Create a Grocery list for easy shopping your item for your trip
 7. Log out
 
-## Role:
+<br />
+
+---
+
+### Role:
 
 | Role      | Student           | Tasks                                                                                                              |
 | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -63,32 +68,52 @@ Understanding constraints, realities and making decisions for the sake of delive
 | Designer  | Josh Boissiere    | Iterate wireframes, User flow, Recipe Table - Google Doc, Excel                                                    |
 | Designer  | Rabia Malik Jamil | Pitch deck, User flow, Competitive analysis, Problem space, Persona, Prototype                                     |
 
-## Languages and Tools:
+<br />
+
+---
+
+### Languages and Tools:
 
 <img align="left" alt="visualstudio" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+Visual Studio Code
 <img align="left" alt="git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+Version control Git
 <img align="left" alt="github" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+GitHub
 <img align="left" alt="terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
+Zsh
 <img align="left" alt="html" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+HTML 5
 <img align="left" alt="css" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+CSS 3
 <img align="left" alt="sass" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />
+SASS
 <img align="left" alt="javascript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
+JavaScript
 <img align="left" alt="python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
+Python
 <img align="left" alt="django" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" />
-<img align="left" alt="mongodb" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" />
+Django
 <img align="left" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
-<img align="left" alt="PostgreSQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgesql/postgresql.png" />
+SQL
+<img align="left" alt="PostgreSQL" width="26px" src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png" />
+PostgreSQL
 
 <br />
 
 ---
 
-## Technologies:
+### Technologies:
 
-- Tasks manager: Trello board
-- Database Model: Lucid Chart
-- Wireframe and Prototype: Figma + FigJam
-- User flow: Whimsical
+<img align="left" alt="Trello" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
+Tasks Manager - Trello Board
+<img align="left" alt="Lucid" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
+Database Model - Lucid Chart
+<img align="left" alt="Figma" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
+Wireframe and Prototype - Figma + FigJam
+<img align="left" alt="Whimsical" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
+User flow - Whimsical
+
 
 <br />
 
@@ -108,7 +133,7 @@ Understanding constraints, realities and making decisions for the sake of delive
 - They got to the campsite
 - Opens app to finish cooking following the rest of the recipe.
 
-![user flow diagram](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/user-flow.png)
+<img align="center" alt="user flow diagram" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/user-flow.png" />
 
 #### User Persona:
 
@@ -140,7 +165,7 @@ I don’t like to be constrained with the type of cooking tools usually. I want 
 
 ### Entity Relationship Diagram:
 
-![database ERD diagram](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/erd.png)
+<img align="center" alt="Database ERD diagram" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/erd.png" />
 
 <br />
 
@@ -152,15 +177,11 @@ I don’t like to be constrained with the type of cooking tools usually. I want 
 - Enable commenting when user view Recipe (completed)
 - Create a Grocery List where user can keep track ingredient to buy (completed)
 
-<br />
-
 ---
 
 ### License:
 
 Distributed under the MIT License.
-
-<br />
 
 ---
 
