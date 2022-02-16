@@ -46,11 +46,13 @@ def trip_list(request):
 
 @login_required
 def trip_create(request, recipe_id):
-    trip_form = TripForm() 
+    trip_form = TripForm()
+    equipments = Equipment.objects.all()
     return render(request, 'trip_form.html', { 
         'trip_form': trip_form,
-        'recipe_id': recipe_id
-         })
+        'recipe_id': recipe_id,
+        'equipments': equipments
+    })
 
 def trip_add(request, recipe_id):
     form = TripForm(request.POST)

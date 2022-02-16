@@ -1,6 +1,6 @@
 # S'more Recipe
 
-![logo](https://github.com/luye713/SmoreRecipes/blob/master/main_app/static/assets/md/logo.png)
+![logo](https://github.com/luye713/SmoreRecipes/tree/main/main_app/static/assets/md/logo.png)
 
 ## Place where you plan your next camping trip
 
@@ -71,7 +71,7 @@ Prep some ingredients at home and package them following the recipe.
 They got to the campsite
 Opens app to finish cooking following the rest of the recipe.
 
-![user flow diagram](https://github.com/luye713/SmoreRecipes/blob/master/main_app/static/assets/md/user-flow.png)
+![user flow diagram](https://github.com/luye713/SmoreRecipes/tree/main/main_app/static/assets/md/user-flow.png)
 
 ### User Persona:
 
@@ -99,7 +99,7 @@ I don’t like to be constrained with the type of cooking tools usually. I want 
 
 ### ERD:
 
-![database ERD diagram](https://github.com/luye713/SmoreRecipes/blob/master/main_app/static/assets/md/erd.png)
+![database ERD diagram](https://github.com/luye713/SmoreRecipes/tree/main/main_app/static/assets/md/erd.png)
 
 ### Icebox:
 
@@ -113,9 +113,9 @@ Distributed under the MIT License.
 
 ### Contact:
 
-Developer - Lu Ye - [GitHub](https://github.com/luye713)
-Developer - Josh Nguyen - [Portfolio](https://joshnguyentoronto.com)
-Designer - May Wu - [link](https://www.google.com/)
-Designer - Paula Abejero - [link](https://www.google.com/)
-Designer - Josh Boissiere - [link](https://www.google.com/)
-Designer - Rabia Malik Jamil - [link](https://www.google.com/)
+- Developer - Lu Ye - [GitHub](https://github.com/luye713)
+- Developer - Josh Nguyen - [Portfolio](https://joshnguyentoronto.com)
+- Designer - May Wu - [link](https://www.google.com/)
+- Designer - Paula Abejero - [link](https://www.google.com/)
+- Designer - Josh Boissiere - [link](https://www.google.com/)
+- Designer - Rabia Malik Jamil - [link](https://www.google.com/)
