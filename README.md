@@ -1,6 +1,8 @@
 # S'more Recipe
 
-<img align="center" alt="Smore Recipes icon" width="100px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png" />
+<p align="center">
+    <img alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png" />
+</p>
 
 ### Plan your next camping trip
 
@@ -74,29 +76,29 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 ### Languages and Tools:
 
-<img align="left" alt="visualstudio" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
+<img align="left" alt="visualstudio" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
 Visual Studio Code
-<img align="left" alt="git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+<img align="left" alt="git" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
 Version control Git
-<img align="left" alt="github" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+<img align="left" alt="github" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
 GitHub
-<img align="left" alt="terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
+<img align="left" alt="terminal" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" />
 Zsh
-<img align="left" alt="html" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+<img align="left" alt="html" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
 HTML 5
-<img align="left" alt="css" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+<img align="left" alt="css" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
 CSS 3
-<img align="left" alt="sass" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />
+<img align="left" alt="sass" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" />
 SASS
-<img align="left" alt="javascript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
+<img align="left" alt="javascript" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
 JavaScript
-<img align="left" alt="python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
+<img align="left" alt="python" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
 Python
-<img align="left" alt="django" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" />
+<img align="left" alt="django" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" />
 Django
-<img align="left" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
+<img align="left" alt="SQL" width="30px" height="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" />
 SQL
-<img align="left" alt="PostgreSQL" width="26px" src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png" />
+<img align="left" alt="PostgreSQL" width="30px" height="30px" src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png" />
 PostgreSQL
 
 <br />
@@ -105,13 +107,13 @@ PostgreSQL
 
 ### Technologies:
 
-<img align="left" alt="Trello" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
+<img align="left" alt="Trello" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
 Tasks Manager - Trello Board
-<img align="left" alt="Lucid" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
+<img align="left" alt="Lucid" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
 Database Model - Lucid Chart
-<img align="left" alt="Figma" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
+<img align="left" alt="Figma" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
 Wireframe and Prototype - Figma + FigJam
-<img align="left" alt="Whimsical" width="26px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
+<img align="left" alt="Whimsical" width="30px" height="30px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
 User flow - Whimsical
 
 
