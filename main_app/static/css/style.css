@@ -209,17 +209,17 @@ ul, li {
 }
 
 .signup_help {
-	color: #949494;
-	height: inherit !important;
+  color: #949494;
+  height: inherit !important;
 }
 
 a.signup_help {
-	display: block;
-	text-align: center;
+  display: block;
+  text-align: center;
 }
 
 a.signup_help:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .nav-wrapper {
@@ -592,6 +592,12 @@ a.signup_help:hover {
   color: #fac02d;
 }
 
+.select_trip {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 30px 0;
+}
+
 .trip-each {
   border: 1px solid #FAC02C;
   border-radius: 10px;
@@ -629,19 +635,11 @@ a.signup_help:hover {
 }
 
 .trip-create p input {
-<<<<<<< HEAD
-	height: 30px;
-	border-radius: 5px;
-	border: 1px solid #FAC02C;
-	background-color: transparent;
-	color: white;
-=======
   height: 30px;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid #FAC02C;
   background-color: transparent;
   color: white;
->>>>>>> origin/main
 }
 
 .trip-create .btn {
@@ -649,8 +647,10 @@ a.signup_help:hover {
 }
 
 #notrip {
-	display: flex;
-	padding: 103px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 103px 0px;
 }
 
 .recipe-cate {
