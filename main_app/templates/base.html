@@ -22,8 +22,7 @@
                             <li><a class="nav-trip" href="{% url 'trip_list' %}">My Trips</a></li>
                             <li><a class="nav-recipe" href="{% url 'recipe_list' 'all' 'all' %}">Explore</a></li>
                             <li><a class="nav-grocery" href="{% url 'grocery_list' %}">Grocery</a></li>
-                            <li><a class="logout-link" style="padding-top: 5px; display: none;" href="{% url 'logout' %}">logout</a></li>
-                            <li><a class="logout-link-icon" style="padding-top: 5px; display: none;" href="{% url 'logout' %}"><img width="16px" src="{% static 'assets/logout.svg' %}"></a></li>
+                            <li><a class="logout-link" style="padding-top: 5px; min-width: 40px;" href="{% url 'logout' %}">logout</a></li>
                         </ul>
                     {% endif %}
                 </ul>

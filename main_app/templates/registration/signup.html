@@ -13,6 +13,10 @@
       {% csrf_token %}
       {{ form.as_p }}
       <input style="margin-top: 20px;" type="submit" class="btn2" value="signup">
+      <div class="signup_help_container">
+        <span class="signup_help">Already have an account?</span>
+        <span class="signup_help"><a href="{% url 'login' %}">Log in here</a></span>
+      </div>
       <script defer>
         let one = document.getElementById('id_username')
         let two = document.getElementById('id_password1')
@@ -47,4 +51,20 @@
     </form>
   </div>
 </div>
+
+<style>
+  .signup_help {
+      margin: 0;
+      padding: 0;
+      height: 20px;
+      text-align: center;
+  }
+  .signup_help > a {
+      color: #949494;
+  }
+  footer {
+      display: none;
+  }
+</style>
+
 {% endblock %}

@@ -1,43 +1,44 @@
 # S'more Recipe
 
-![logo](https://github.com/luye713/SmoreRecipes/tree/main/main_app/static/assets/md/logo.png)
+![logo](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/logo.png)
 
-## Place where you plan your next camping trip
+## Place to plan your next camping trip
 
 ### About:
 
 S'more Recipe is a Group Project for the General Assembly's Collabathon between Software Engineer Immersive student and UX Design Immersive student. GA's Collabathon create opportunity for Software developer and Designer to share their skills and work in a team emulate real world work environment to create a project together.
-GA's Collabathon allows Designer and Developer to play the role of product owner, researcher, creator and presenter, taking an idea from concept to completion.
-Our team name is Mango consist of two Developer (Lu Ye & Josh Nguyen) and four Designer (May Wu, Paula Abejero, Josh Boissiere and Rabia Malik Jamil)
+&nbsp;
+S'more Recipe was created as a one-stop-shop for people who love to go camping that looking for a app to help them plan for their trips.
+&nbsp;
+The app enable user to create trip that they are planning to go, update what equipment they want to bring to the trip, explore a list of recipe that they can use in their camping, and have a quick and easy grocery list to help them prepare for the trip.
 
 ### Usage:
 
-- Log in or Sign up new account to get started
-- Create Trip, update Trip information, delete Trip
-- Explore Recipe by filter all or by each category
-- See each Recipe detail, comment on your favorite recipe and add it to your camping trip
-- Download recipe for offline usage
-- Create a Grocery list for easy shopping your item for your trip
-- Log out
+1. Log in or Sign up new account to get started
+2. Create Trip, update Trip information, delete Trip
+3. Explore Recipe by filter all or by each category
+4. See each Recipe detail, comment on your favorite recipe and add it to your camping trip
+5. Download recipe for offline usage
+6. Create a Grocery list for easy shopping your item for your trip
+7. Log out
 
 ### Outcome:
 
-- Help SEI and UXDI students gain direct experiences that is relevant to their future carrer.
+- This project help the SEI and UXDI students gain direct experiences that is relevant to our future carrer.
 - Understand and appreciate the relationship between developer and designer
 - Accomplish the osftware development process with a diverse, talented team.
-- Understanding constraints, realities and making decisions for the sake of delivering an MVP
-- Quickly presenting ideas to stakeholders
+- Understanding constraints, realities and making decisions for the sake of delivering an MVP to present to stakeholders.
 
 ### Role:
 
-|   Role    |    Student     |                                                       Tasks                                                        |
-| :-------: | :------------: | :----------------------------------------------------------------------------------------------------------------: |
-| Developer |     Lu Ye      | Database, Wireframe, Routing, Functionality, Styling, Authentication, Authorization, Images & Logo, Github Manager |
-| Developer |  Josh Nguyen   | Database, Wireframe, Routing, Functionality, Styling, Authentication, Authorization, Documenter, Database manager  |
-| Designer  |     May Wu     |                                           Iterate wireframes, User flow                                            |
-| Designer  | Paula Abejero  |                           Iterate wireframes, User flow, Style guild - heading and font                            |
-| Designer  | Josh Boissiere |                          Iterate wireframes, User flow, Recipe Table - Google Doc, Excel                           |
-| Designer  |  Malik Jamil   |                   Pitch deck, User flow, Competitive analysis, Problem space, Persona, Prototype                   |
+| Role      | Student           | Tasks                                                                                                              |
+| --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Developer | Lu Ye             | Database, Wireframe, Routing, Functionality, Styling, Authentication, Authorization, Images & Logo, Github Manager |
+| Developer | Josh Nguyen       | Database, Wireframe, Routing, Functionality, Styling, Authentication, Authorization, Documenter, Database manager  |
+| Designer  | May Wu            | Iterate wireframes, User flow                                                                                      |
+| Designer  | Paula Abejero     | Iterate wireframes, User flow, Style guild - heading and font                                                      |
+| Designer  | Josh Boissiere    | Iterate wireframes, User flow, Recipe Table - Google Doc, Excel                                                    |
+| Designer  | Rabia Malik Jamil | Pitch deck, User flow, Competitive analysis, Problem space, Persona, Prototype                                     |
 
 ### Build with:
 
@@ -50,7 +51,9 @@ Tech Stack:
 - SASS
 - JavaScript
 - xhtml2pdf
-  Technologies:
+
+Technologies:
+
 - Version control: Git + GitHub
 - Tasks manager: Trello board
 - Database Model: Lucid Chart
@@ -59,47 +62,47 @@ Tech Stack:
 
 ### User flow:
 
-Choose a cooking device, choose what meals they want to make following a recipe.
-Inputs 3 dinners, one pot, one portable stove.
-Presented with a list of ideas.
-User picks 4-5 recipes.
-Reviews the recipes based on ingredients and time.
-Delete 2 irrelevant recipes.
-Save the recipes for offline viewing
-Add ingredients to the shopping list
-Prep some ingredients at home and package them following the recipe.
-They got to the campsite
-Opens app to finish cooking following the rest of the recipe.
+- Choose a cooking device, choose what meals they want to make following a recipe.
+- Inputs 3 dinners, one pot, one portable stove.
+- Presented with a list of ideas.
+- User picks 4-5 recipes.
+- Reviews the recipes based on ingredients and time.
+- Delete 2 irrelevant recipes.
+- Save the recipes for offline viewing
+- Add ingredients to the shopping list
+- Prep some ingredients at home and package them following the recipe.
+- They got to the campsite
+- Opens app to finish cooking following the rest of the recipe.
 
-![user flow diagram](https://github.com/luye713/SmoreRecipes/tree/main/main_app/static/assets/md/user-flow.png)
+![user flow diagram](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/user-flow.png)
 
 ### User Persona:
 
-Alana
-No-frill camper.
-Cooks simple meals, but not just burgers and hot dogs.
-Doesn’t want to bring a lot of stuff with her, ideally one cooking tool.
+Alana\s\s
+No-frill camper.\s\s
+Cooks simple meals, but not just burgers and hot dogs.\s\s
+Doesn’t want to bring a lot of stuff with her, ideally one cooking tool.\s\s
 
 ### Needs:
 
-Quick but delicious Meals
-Switch up between burgers, hot dogs with home cooked meals.
-Access recipes offline at camp site.
+Quick but delicious Meals.\s\s
+Switch up between burgers, hot dogs with home cooked meals.\s\s
+Access recipes offline at camp site.\s\s
 
 ### Frustration:
 
-Wants to plan better meals for camping but don’t know how to do it minimally.
-Time consuming to Google recipes and manually save them for every trip.
+Wants to plan better meals for camping but don’t know how to do it minimally.\s\s
+Time consuming to Google recipes and manually save them for every trip.\s\s
 
 ### User Testing Notes 2022-02-11
 
-Ricardo: Explore option is key for me to see more recipes. I’d want to go to ‘explore’ from my planned trips too.
-Eric: Add trip function was inconsistent at the recipe page compared to the ‘My trips’ page.
-I don’t like to be constrained with the type of cooking tools usually. I want to explore and add any recipes to my trips folder and then decide what tools I need to bring to the camping trip.
+Ricardo: Explore option is key for me to see more recipes. I’d want to go to ‘explore’ from my planned trips too.\s\s
+Eric: Add trip function was inconsistent at the recipe page compared to the ‘My trips’ page.\s\s
+I don’t like to be constrained with the type of cooking tools usually. I want to explore and add any recipes to my trips folder and then decide what tools I need to bring to the camping trip.\s\s
 
-### ERD:
+### Entity Relationship Diagram:
 
-![database ERD diagram](https://github.com/luye713/SmoreRecipes/tree/main/main_app/static/assets/md/erd.png)
+![database ERD diagram](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/erd.png)
 
 ### Icebox:
 
@@ -113,9 +116,12 @@ Distributed under the MIT License.
 
 ### Contact:
 
-- Developer - Lu Ye - [GitHub](https://github.com/luye713)
-- Developer - Josh Nguyen - [Portfolio](https://joshnguyentoronto.com)
-- Designer - May Wu - [link](https://www.google.com/)
-- Designer - Paula Abejero - [link](https://www.google.com/)
-- Designer - Josh Boissiere - [link](https://www.google.com/)
-- Designer - Rabia Malik Jamil - [link](https://www.google.com/)
+Developer
+[Lu Ye](https://github.com/luye713)\s\s
+[Josh Nguyen](https://joshnguyentoronto.com)\s\s
+
+Designer:
+[May Wu](https://www.google.com/)\s\s
+[Paula Abejero](https://www.google.com/)\s\s
+[Josh Boissiere](https://www.google.com/)\s\s
+[Rabia Malik Jamil](https://www.google.com/)\s\s

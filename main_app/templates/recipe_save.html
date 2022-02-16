@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <div class="row">
     <h1>Save Recipe of A Trip</h1>
 </div>
 
-<script>
+<script defer>
+    let navRecipe = document.querySelector('.nav-recipe')
+    navRecipe.style.fontWeight = "600";
+    navRecipe.style.textDecoration = "underline";
     let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     let one = document.querySelector('.logout-link')
-    let two = document.querySelector('.logout-link-icon')
     if (width >= 425) {
-        two.style.display = "none"
-        one.style.display = "unset"
+        one.innerHTML = "logout"
     } else {
-        two.style.display = "unset"
-        one.style.display = "none"
+        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
     }
 </script>
 

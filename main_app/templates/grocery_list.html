@@ -16,16 +16,12 @@
         <script defer>
             let one = document.getElementById('id_name').placeholder = "Item name"
             let two = document.getElementById('id_amount').placeholder = "amount"
-
             let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
             let one = document.querySelector('.logout-link')
-            let two = document.querySelector('.logout-link-icon')
             if (width >= 425) {
-                two.style.display = "none"
-                one.style.display = "unset"
+                one.innerHTML = "logout"
             } else {
-                two.style.display = "unset"
-                one.style.display = "none"
+                one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
             }
         </script>
     </form>
@@ -45,5 +41,11 @@
         </div>
     {% endfor %}
 </div>
+
+<script defer>
+    let navGrocery = document.querySelector('.nav-grocery')
+    navGrocery.style.fontWeight = "600";
+    navGrocery.style.textDecoration = "underline";
+</script>
 
 {% endblock %}
