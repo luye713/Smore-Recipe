@@ -548,11 +548,7 @@ a.signup_help {
 
 .recipe-tool {
     .btn-wrapper {
-        max-width: 310px;
-        a {
-            width: 40px;
-            height: 40px;
-        }
+        max-width: 320px;
     }
 }
 
@@ -714,13 +710,5 @@ a.signup_help {
         display: grid;
         grid-template-columns: 1fr 1fr;
         
-    }
-}
-
-
-@media only screen and (min-width: 750px) {
-    .cate-tool {
-        display: grid;
-        grid-template-columns: 60% auto;
     }
 }

@@ -6,4 +6,17 @@
     <h1>And Forms to Select Equipment to add to list</h1>
 </div>
 
+<script>
+    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    let one = document.querySelector('.logout-link')
+    let two = document.querySelector('.logout-link-icon')
+    if (width >= 425) {
+        two.style.display = "none"
+        one.style.display = "unset"
+    } else {
+        two.style.display = "unset"
+        one.style.display = "none"
+    }
+</script>
+
 {% endblock %}
