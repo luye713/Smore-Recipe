@@ -208,6 +208,20 @@ ul, li {
   margin-top: 10px;
 }
 
+.signup_help {
+	color: #949494;
+	height: inherit !important;
+}
+
+a.signup_help {
+	display: block;
+	text-align: center;
+}
+
+a.signup_help:hover {
+	text-decoration: underline;
+}
+
 .nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,15 +629,28 @@ ul, li {
 }
 
 .trip-create p input {
+<<<<<<< HEAD
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #FAC02C;
+	background-color: transparent;
+	color: white;
+=======
   height: 30px;
   border-radius: 5px;
   border: 1px solid white;
   background-color: transparent;
   color: white;
+>>>>>>> origin/main
 }
 
 .trip-create .btn {
   background-color: transparent;
+}
+
+#notrip {
+	display: flex;
+	padding: 103px 0px;
 }
 
 .recipe-cate {
