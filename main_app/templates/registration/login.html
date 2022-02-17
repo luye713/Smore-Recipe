@@ -7,11 +7,17 @@
     <div id="camping_img"><img src="{% static 'assets/camping.svg' %}"></div>
     <div class="login">
         <h2>Sign-In</h2>
-        <form action="{% url 'login' %}" method="post">
+        <form autocomplete="off" autocapitalize="off" action="{% url 'login' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" class="btn2" value="Sign-In">
             <input type="hidden" name="next" value="{{ next }}">
+            <script>
+                let m1 = document.getElementById('id_username')
+                let m2 = document.getElementById('id_password')
+                m1.setAttribute("autocomplete", "off")
+                m2.setAttribute("autocomplete", "off")
+            </script>
         </form>
         <div class="signup_help_container">
             <span class="signup_help">New to S'more Recipes?</span>
