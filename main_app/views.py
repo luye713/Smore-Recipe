@@ -71,6 +71,10 @@ def trip_detail(request, trip_id):
     equipments = Equipment.objects.all()
     return render(request, 'trip_detail.html', { 'trip': trip, 'equipments': equipments })
 
+def trip_delete_confirm(request, trip_id):
+    trip = Trip.objects.get(id=trip_id)
+    return render(request, 'trip_delete_confirm.html', { 'trip': trip })
+
 def trip_delete(request, trip_id):
     Trip.objects.get(id=trip_id).delete()
     return redirect('trip_list')

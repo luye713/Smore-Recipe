@@ -47,6 +47,9 @@ footer {
     bottom: 0;
 }
 
+input {
+    font-family: 'Quicksand', sans-serif;
+}
 
 a {
     color: white;
@@ -62,6 +65,7 @@ ul, li {
     list-style: none;
     padding: 0;
     margin: 0;
+    line-height: 1.8;
 }
 
 
@@ -79,6 +83,11 @@ ul, li {
     display: inline-block;
     display: grid;
     place-content: center;
+
+    &:hover {
+        opacity: .8;
+        transition: all .2s;
+    }
 }
 
 .btn2 {
@@ -94,6 +103,11 @@ ul, li {
     text-decoration: none;
     display: inline-block;
     background-color: #FAC02C;
+
+    &:hover {
+        opacity: .8;
+        transition: all .2s;
+    }
 }
 
 .btn3 {
@@ -111,6 +125,11 @@ ul, li {
     display: inline-block;
     display: grid;
     place-content: center;
+
+    &:hover {
+        opacity: .8;
+        transition: all .2s;
+    }
 }
 
 .all {
@@ -119,6 +138,7 @@ ul, li {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0 !important;
 }
 
 .tool {
@@ -191,6 +211,7 @@ a.signup_help {
     display: flex;
     max-width: 900px;
     width: 100%;
+    padding: 0 20px;
 }
 
 .nav {
@@ -207,10 +228,6 @@ a.signup_help {
     li {
         display: flex;
         align-items: center;
-
-        a {
-            min-width: 64px;
-        }
     }
 }
 
@@ -221,14 +238,10 @@ a.signup_help {
 
 .btn-wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    gap: 10px;
     max-width: 500px;
-}
-
-.recipe-detail-category {
-    display: grid;
-    place-content: center;
 }
 
 .recipe-detail-cat-container {
@@ -236,7 +249,8 @@ a.signup_help {
     flex-direction: row;
     justify-content: space-between;
     margin: 8px 0;
-    width: 330px;
+    width: 100%;
+    max-width: 550px;
     p {
         height: 35px;
     }
@@ -251,8 +265,12 @@ a.signup_help {
 }
 
 .recipe-detail-img {
-    display: grid;
-    place-content: center;
+    width: 100%;
+    max-width: 550px;
+
+    img {
+        width: 100%;
+    }
 }
 
 .equip-wrapper {
@@ -268,6 +286,12 @@ a.signup_help {
     img {
         width: 100%;
         filter: saturate(0) brightness(2);
+    }
+}
+
+input[type="submit"] {
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -348,6 +372,10 @@ a.signup_help {
     flex-direction: column;
     justify-content: center;
     margin: 10px 0 0 0;
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 #camping_img {
@@ -448,6 +476,7 @@ a.signup_help {
 }
 
 .ingredient-wrapper {
+    max-width: 550px;
     h4 {
         margin: 20px 0 5px 0;
     }
@@ -458,6 +487,7 @@ a.signup_help {
 }
 
 .instruction-wrapper {
+    max-width: 550px;
     h4 {
         margin: 20px 0 5px 0;
     }
@@ -521,11 +551,13 @@ a.signup_help {
             margin: 10px 0;
         }
         input {
-            height: 30px;
-            border-radius: 5px;
+            border-radius: 6px;
             border: 1px solid #FAC02C;
             background-color: transparent;
+            padding: 5px 10px;
             color: white;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 18px;
         }
     }
     .btn {
@@ -539,17 +571,17 @@ a.signup_help {
 }
 
 .delete_trip {
-    
+    max-width: 335px;
 }
 
 .recipe-cate {
     display: flex;
     flex-direction: column;
     h2 {
-        margin: 20px 0 5px 15px;
+        margin: 20px 0 5px 0;
     }
     .btn {
-        margin: 10px 0;
+        margin: 0;
     }
 }
 
@@ -563,34 +595,48 @@ a.signup_help {
 .grocery-each {
     border: 1px solid #FAC02C;
     border-radius: 10px;
-    margin: 25px 0;
-    padding: 15px;
+    margin: 10px 0;
+    padding: 10px;
     display: grid;
-    grid-template-columns: auto 20px;
+    grid-template-columns: auto 50px;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
     p {
-        color: #FAC02C;
-        margin: 10px 0;
+        margin: 0;
     }
+
+    .grocery-info {
+        display: flex;
+    }
+
     .grocery-link {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
     }
 }
 
 .grocery-form {
-    display: grid;
-    grid-template-columns: 70% 30%;
+    max-width: 550px;
+    width: 100%;
+
     label {
-        display: none;
+        min-width: 70px;
+        align-self: center;
     }
-    input {
-        height: 30px;
+
+    p {
+        display: flex;
+    }
+
+    input[type="text"] {
+        height: 40px;
         background-color: transparent;
-        color: #FAC02C;
         border-radius: 5px;
+        color: white;
         border: 1px solid #FAC02C;
         width: 90%;
+        padding: 5px 10px;
     }
     ::placeholder {
         color: #FAC02C;
@@ -638,7 +684,9 @@ a.signup_help {
                     border: 1px solid white;
                     border-radius: 5px;
                     resize: none;
-                    
+                    max-width: 500px;
+                    font-family:'Quicksand', sans-serif;
+                    padding: 10px 15px;
                     min-width: 200px;
                 }
             }
@@ -650,6 +698,7 @@ a.signup_help {
     padding: 10px 0;
     margin: 10px 0;
     display:grid;
+    max-width: 550px;
     grid-template-columns: 40px auto;
     border-bottom: 1px solid #697550;
     .comment-field-icon {
@@ -703,13 +752,6 @@ a.signup_help {
 
 .recipe-detail-download {
     justify-self: flex-end;
-}
-
-
-@media only screen and (min-width: 500px) {
-    main {
-        padding: 30px 5% 0 5%;
-    }
 }
 
 @media only screen and (min-width: 700px) {

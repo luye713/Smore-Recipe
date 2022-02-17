@@ -11,7 +11,7 @@
             {{ grocery_form.as_p }}
         </div>
         <div class="grocery-submit">
-            <input type="submit" class="btn" value="Add +">
+            <input type="submit" class="btn2" style="min-width: 200px;" value="Add +">
         </div>
         <script defer>
             let one = document.getElementById('id_name').placeholder = "Item name"
@@ -32,7 +32,7 @@
         <div class="grocery-each">
             <div class="grocery-info">
                 <p>{{ grocery.name }}</p>
-                <p>-> {{ grocery.amount }}</p>
+                <p>: {{ grocery.amount }}</p>
             </div>
             <div class="grocery-link">
                 <a href="{% url 'grocery_update' grocery.id %}"><img width="15px" src="{% static 'assets/edit' %}.svg"></a>

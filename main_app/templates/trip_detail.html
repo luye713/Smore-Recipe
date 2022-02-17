@@ -2,6 +2,7 @@
 {% block content %}
 {% load static %}
 
+<a href="{% url 'trip_list' %}"><img src="{% static 'assets/goback' %}.svg"></a>
 
 <div>
     <h1>{{ trip.name }}</h1>
@@ -23,6 +24,8 @@
         {% endfor %}
     </div>
 </div>
+
+
 
 <div class="cards">
     {% for recipe in trip.recipes.all %}
@@ -50,7 +53,7 @@
     }
 </script>
 
-<a class="btn" href="{% url 'trip_update_form' trip.id %}" >Edit trip details</a>
+<a class="btn" style="max-width: 415px;" href="{% url 'trip_update_form' trip.id %}" >Edit trip details</a>
 
 
 {% endblock %}
