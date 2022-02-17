@@ -44,13 +44,6 @@
     let navTrip = document.querySelector('.nav-trip')
     navTrip.style.fontWeight = "600";
     navTrip.style.textDecoration = "underline";
-    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    let one = document.querySelector('.logout-link')
-    if (width >= 425) {
-        one.innerHTML = "logout"
-    } else {
-        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
-    }
 </script>
 
 <a class="btn" style="max-width: 415px;" href="{% url 'trip_update_form' trip.id %}" >Edit trip details</a>

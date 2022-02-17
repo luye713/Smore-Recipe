@@ -10,13 +10,6 @@
     let navRecipe = document.querySelector('.nav-recipe')
     navRecipe.style.fontWeight = "600";
     navRecipe.style.textDecoration = "underline";
-    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    let one = document.querySelector('.logout-link')
-    if (width >= 425) {
-        one.innerHTML = "logout"
-    } else {
-        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
-    }
 </script>
 
 {% endblock %}
