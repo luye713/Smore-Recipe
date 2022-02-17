@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/logoimg.png' %}">
     <title>S'more Recipes</title>
 </head>
 <body>
@@ -33,6 +34,17 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    <script defer>
+        let widths = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        let ones = document.querySelector('.logout-link')
+        if (widths >= 425) {
+            ones.innerHTML = "logout"
+        } else {
+            ones.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
+        }
+    </script>
+
     <footer>
         <div>All Rights Reserved, &copy; 2022 S'more Recipes &nbsp;</div>
     </footer>
