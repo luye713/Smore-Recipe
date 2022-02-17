@@ -96,21 +96,12 @@
             </div>
         {% endfor %}
     </div>
+    <script defer>
+        let navRecipe = document.querySelector('.nav-recipe')
+        navRecipe.style.fontWeight = "600";
+        navRecipe.style.textDecoration = "underline";
+    </script>
 </div>
 
-<script defer>
-    let navRecipe = document.querySelector('.nav-recipe')
-    navRecipe.style.fontWeight = "600";
-    navRecipe.style.textDecoration = "underline";
-</script>
-<script defer>
-    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    let one = document.querySelector('.logout-link')
-    if (width >= 425) {
-        one.innerHTML = "logout"
-    } else {
-        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
-    }
-</script>
 
 {% endblock %}

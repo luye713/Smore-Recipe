@@ -5,7 +5,7 @@
 <h1>{{ user.username }}'s grocery list:</h1>
 
 <div>
-    <form class="grocery-form" action="{% url 'grocery_create' %}" method="post">
+    <form autocomplete="off" class="grocery-form" action="{% url 'grocery_create' %}" method="post">
         {% csrf_token %}
         <div>
             {{ grocery_form.as_p }}
@@ -16,13 +16,8 @@
         <script defer>
             let one = document.getElementById('id_name').placeholder = "Item name"
             let two = document.getElementById('id_amount').placeholder = "amount"
-            let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-            let one = document.querySelector('.logout-link')
-            if (width >= 425) {
-                one.innerHTML = "logout"
-            } else {
-                one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
-            }
+            one.setAttribute("autocomplete", "off")
+            two.setAttribute("autocomplete", "off")
         </script>
     </form>
 </div>

@@ -9,7 +9,7 @@
 
     {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
 
-    <form class="signup-form" id="signup-form" method="post" action="{% url 'signup' %}">
+    <form autocomplete="off" autocapitalize="off" class="signup-form" id="signup-form" method="post" action="{% url 'signup' %}">
       {% csrf_token %}
       {{ form.as_p }}
       <input style="margin-top: 20px;" type="submit" class="btn2" value="signup">
@@ -61,6 +61,12 @@
   }
   .signup_help > a {
       color: #949494;
+  }
+  footer {
+    display: none;
+  }
+  header {
+    display: none;
   }
 </style>
 

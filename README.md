@@ -10,6 +10,14 @@
 
 ---
 
+### Web link:
+
+[S'more Recipes](https://smorerecipes.herokuapp.com)
+
+<br />
+
+---
+
 ### About:
 
 S'more Recipe is a Group Project for the General Assembly's Collabathon between Software Engineer Immersive student and UX Design Immersive student. GA's Collabathon create opportunity for Software developer and Designer to share their skills and work in a team emulate real world work environment to create a project together.\
@@ -35,11 +43,12 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 ### Review:
 
-![review1](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review1.png)
-![review2](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review2.png)
-![review3](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review3.png)
-![review4](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review4.png)
-![review5](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review5.png)
+
+<img align="left" alt="Smore Recipes icon" width="180px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review1.png" />
+<img align="left" alt="Smore Recipes icon" width="180px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review2.png" />
+<img align="left" alt="Smore Recipes icon" width="180px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review3.png" />
+<img align="left" alt="Smore Recipes icon" width="180px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review4.png" />
+<img  alt="Smore Recipes icon" width="180px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review5.png" />
 
 <br />
 
@@ -133,19 +142,19 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 <p>
     <img alt="Trello" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
-    Tasks Manager - Trello Board
+    Tasks Manager - <a href="https://trello.com/b/dG98ePOY/trip-planning-project" target="_blank">Trello Board</a> 
 </p>
 <p>
     <img alt="Lucid" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
-    Database Model - Lucid Chart
+    Database Model - <a href="https://lucid.app/lucidchart/6fb696a5-9bec-42ec-9246-b8bd7f494bab/edit?viewport_loc=170%2C7%2C1794%2C908%2C0_0&invitationId=inv_bdb99228-e4f4-43b4-ab51-f9e801b8ef3b" target="_blank">Lucid Chart</a> 
 </p>
 <p>
     <img alt="Figma" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
-    Wireframe and Prototype - Figma + FigJam
+    Wireframe and Prototype - <a href="https://www.figma.com/file/takNmKI5aGFRkOmjYqurdx/Team-Mango-Wireframes?node-id=2%3A720" target="_blank">Figma + Figjam</a>
 </p>
 <p>
     <img alt="Whimsical" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
-    User flow - Whimsical
+    User flow - <a href="https://whimsical.com/camping-recipe-youtube-kids-LHhdL9EKaor3mwowBfcdry" target="_blank">Whimsical</a>
 </p>
 
 
