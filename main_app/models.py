@@ -8,6 +8,9 @@ class Grocery(models.Model):
     amount = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return f"grocery: {self.name}, amount: {self.amount}"
     def get_absolut_url(self):

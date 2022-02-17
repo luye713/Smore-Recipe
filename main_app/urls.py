@@ -17,21 +17,21 @@ urlpatterns = [
     path('trips/<int:trip_id>/update_form/', views.trip_update_form, name='trip_update_form'),
     path('trips/<int:trip_id>/update/', views.trip_update, name='trip_update'),
     # Path for Recipe:
-    path('recipes/(?P<category>)/(?P<equipment>)', views.recipe_list, name='recipe_list'),
+    path('recipes/(?P<category>)/(?P<equipment>)/', views.recipe_list, name='recipe_list'),
     path('recipes/<slug:category>/<slug:equipment>/', views.recipe_list, name='recipe_list'),
     path('recipes/<int:recipe_id>/', views.recipe_detail, name='recipe_detail'),
     path('trips/recipes/<int:recipe_id>/', views.recipe_choose, name='recipe_choose'),
     path('trips/<int:trip_id>/recipes/<int:recipe_id>/', views.recipe_save, name='recipe_save'),
-    path('trips/<int:trip_id>/recipes/<int:recipe_id>/delete', views.recipe_delete, name='recipe_delete'),
+    path('trips/<int:trip_id>/recipes/<int:recipe_id>/delete/', views.recipe_delete, name='recipe_delete'),
     # Path for Equipment:
     path('trips/<int:trip_id>/assoc_equipment/<int:equipment_id>/', views.assoc_equipment, name='assoc_equipment'),
     path('trips/<int:trip_id>/unassoc_equipment/<int:equipment_id>/', views.unassoc_equipment, name='unassoc_equipment'),
     #  Path for Grocery:
     path('groceries/', views.grocery_list, name='grocery_list'),
-    path('groceries/create', views.grocery_create, name='grocery_create'),
-    path('groceries/<int:pk>/update', views.grocery_update.as_view(), name='grocery_update'),
-    path('groceries/<int:grocery_id>/delete', views.grocery_delete, name='grocery_delete'),
+    path('groceries/create/', views.grocery_create, name='grocery_create'),
+    path('groceries/<int:pk>/update/', views.grocery_update.as_view(), name='grocery_update'),
+    path('groceries/<int:grocery_id>/delete/', views.grocery_delete, name='grocery_delete'),
     #  Path for Comment:
-    path('recipes/<int:recipe_id>/comments/create', views.comment_create, name='comment_create'),
-    path('recipes/<int:recipe_id>/comments/<int:comment_id>/delete', views.comment_delete, name='comment_delete'),
+    path('recipes/<int:recipe_id>/comments/create/', views.comment_create, name='comment_create'),
+    path('recipes/<int:recipe_id>/comments/<int:comment_id>/delete/', views.comment_delete, name='comment_delete'),
 ]

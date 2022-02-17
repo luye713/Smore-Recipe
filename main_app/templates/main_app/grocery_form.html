@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <h1>Edit item</h1>
 
@@ -8,5 +9,18 @@
     {{ form.as_p }}
     <input class="btn" type="submit" value="Update">
 </form>
+
+<script defer>
+    let navGrocery = document.querySelector('.nav-grocery')
+    navGrocery.style.fontWeight = "600";
+    navGrocery.style.textDecoration = "underline";
+    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    let one = document.querySelector('.logout-link')
+    if (width >= 425) {
+        one.innerHTML = "logout"
+    } else {
+        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
+    }
+</script>
 
 {% endblock %}

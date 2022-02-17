@@ -7,21 +7,22 @@
 <div>
     <h1>{{ trip.name }}</h1>
     <h4>{{ trip.start_date }} - {{ trip.end_date }}</h4>
-  
-    <h4>Cooking tools to bring:</h4>
 
-<div class="btn-wrapper">
-    {% for equipment in equipments %}
-        {% if equipment in trip.equipments.all %}
-            <div class="tool-wrapper active">
-                <a class="tool" href="{% url 'unassoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
-            </div>
-        {% else %}
-            <div class="tool-wrapper">
-                <a class="tool" href="{% url 'assoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
-            </div>
-        {% endif %}
-    {% endfor %}
+    <h4>Cooking tools to bring:</h4>
+    
+    <div class="btn-wrapper">
+        {% for equipment in equipments %}
+            {% if equipment in trip.equipments.all %}
+                <div class="tool-wrapper active">
+                    <a class="tool" href="{% url 'unassoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+                </div>
+            {% else %}
+                <div class="tool-wrapper">
+                    <a class="tool" href="{% url 'assoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
 
 
@@ -40,15 +41,15 @@
 </div>
 
 <script>
+    let navTrip = document.querySelector('.nav-trip')
+    navTrip.style.fontWeight = "600";
+    navTrip.style.textDecoration = "underline";
     let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     let one = document.querySelector('.logout-link')
-    let two = document.querySelector('.logout-link-icon')
     if (width >= 425) {
-        two.style.display = "none"
-        one.style.display = "unset"
+        one.innerHTML = "logout"
     } else {
-        two.style.display = "unset"
-        one.style.display = "none"
+        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
     }
 </script>
 

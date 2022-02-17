@@ -26,7 +26,7 @@ main {
 
 header {
     top: 0;
-    padding: 10px 0 0 0;
+    padding: 10px 10px 0 5px;
     width: 100%;
     position: fixed;
     overflow: hidden;
@@ -341,6 +341,13 @@ a.signup_help {
     align-items: center;
     margin-top: -250px;
     height: 117vh;
+}
+
+.signup_help_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 0 0;
 }
 
 #camping_img {
