@@ -142,7 +142,7 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 <p>
     <img alt="Trello" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/trello.png" />
-    Tasks Manager - Trello Board
+    Tasks Manager - [Trello Board](https://trello.com/b/dG98ePOY/trip-planning-project)
 </p>
 <p>
     <img alt="Lucid" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/lucid.png" />
@@ -150,11 +150,11 @@ Understanding constraints, realities and making decisions for the sake of delive
 </p>
 <p>
     <img alt="Figma" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/figma.png" />
-    Wireframe and Prototype - Figma + FigJam
+    Wireframe and Prototype - [Figma + FigJam](https://www.figma.com/file/takNmKI5aGFRkOmjYqurdx/Team-Mango-Wireframes?node-id=2%3A720)
 </p>
 <p>
     <img alt="Whimsical" width="24px" height="24px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/whimsical.png" />
-    User flow - Whimsical
+    User flow - [Whimsical](https://whimsical.com/camping-recipe-youtube-kids-LHhdL9EKaor3mwowBfcdry)
 </p>
 
 
