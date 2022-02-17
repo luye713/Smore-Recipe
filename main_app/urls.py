@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # Home:
     path('', views.home, name='home'),
     path('accounts/signup/', views.signup, name='signup'),
     # PDF Download:
@@ -13,7 +14,6 @@ urlpatterns = [
     path('trips/<int:trip_id>/', views.trip_detail, name='trip_detail'),
     path('trips/<int:trip_id>/delete/', views.trip_delete, name='trip_delete'),
     path('trips/<int:trip_id>/delete_confirm/', views.trip_delete_confirm, name='trip_delete_confirm'),
-
     path('trips/<int:trip_id>/update_form/', views.trip_update_form, name='trip_update_form'),
     path('trips/<int:trip_id>/update/', views.trip_update, name='trip_update'),
     # Path for Recipe:
