@@ -10,6 +10,14 @@
 
 ---
 
+### Web link:
+
+[S'more Recipes](https://smorerecipes.herokuapp.com)
+
+<br />
+
+---
+
 ### About:
 
 S'more Recipe is a Group Project for the General Assembly's Collabathon between Software Engineer Immersive student and UX Design Immersive student. GA's Collabathon create opportunity for Software developer and Designer to share their skills and work in a team emulate real world work environment to create a project together.\
