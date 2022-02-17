@@ -41,15 +41,15 @@
     document.getElementById('id_start_date').value = `{{ trip.start_date|date:"Y-m-d" }}`
     document.getElementById('id_end_date').value = `{{ trip.end_date|date:"Y-m-d"  }}`
 
+    let navTrip = document.querySelector('.nav-trip')
+    navTrip.style.fontWeight = "600";
+    navTrip.style.textDecoration = "underline";
     let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     let one = document.querySelector('.logout-link')
-    let two = document.querySelector('.logout-link-icon')
     if (width >= 425) {
-        two.style.display = "none"
-        one.style.display = "unset"
+        one.innerHTML = "logout"
     } else {
-        two.style.display = "unset"
-        one.style.display = "none"
+        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
     }
 </script>
 

@@ -211,7 +211,6 @@ def grocery_delete(request, grocery_id):
 
 
 # COMMENTS:
-
 @login_required
 def comment_create(request, recipe_id):
     form = CommentForm(request.POST)

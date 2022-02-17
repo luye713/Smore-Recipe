@@ -20,18 +20,6 @@
         }
     </style>
     {{ trip_form.as_p }}
-    
-    <div class="btn-wrapper">
-        {% for equipment in equipments %}
-            {% if equipment in trip.equipments.all %}
-                <div class="tool-wrapper active">
-            {% else %}
-                <div class="tool-wrapper">
-            {% endif %}
-                <p class="tool2"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg" alt="tools"></p>
-            </div>
-        {% endfor %}
-    </div>
 
     <input class="btn" type="submit" value="Create">
 </form>
@@ -50,15 +38,15 @@
         format: 'yyyy-mm-dd'
     }); 
 
+    let navTrip = document.querySelector('.nav-trip')
+    navTrip.style.fontWeight = "600";
+    navTrip.style.textDecoration = "underline";
     let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     let one = document.querySelector('.logout-link')
-    let two = document.querySelector('.logout-link-icon')
     if (width >= 425) {
-        two.style.display = "none"
-        one.style.display = "unset"
+        one.innerHTML = "logout"
     } else {
-        two.style.display = "unset"
-        one.style.display = "none"
+        one.innerHTML = "<img width=\"16px\" src=\"{% static 'assets/logout.svg' %}\">"
     }
 </script>
 

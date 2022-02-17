@@ -13,8 +13,24 @@
             <input type="submit" class="btn2" value="Sign-In">
             <input type="hidden" name="next" value="{{ next }}">
         </form>
-        <p class="signup_help">New to S'more Recipes?</p>
-        <a class="signup_help" href="{% url 'signup' %}">Sign up here</a>
+        <div class="signup_help_container">
+            <span class="signup_help">New to S'more Recipes?</span>
+            <span class="signup_help"><a href="{% url 'signup' %}">Sign up here</a></span>
+        </div>
+        <style>
+            .signup_help {
+                margin: 0;
+                padding: 0;
+                height: 20px;
+                text-align: center;
+            }
+            .signup_help > a {
+                color: #949494;
+            }
+            footer {
+                display: none;
+            }
+        </style>
     </div>
 </div>
 
