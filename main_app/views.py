@@ -123,7 +123,7 @@ def recipe_detail(request, recipe_id):
     categories = Category.objects.filter(id__in = recipe.categories.all().values_list('id'))
     equipments = Equipment.objects.filter(id__in = recipe.equipments.all().values_list('id'))
     trips = Trip.objects.filter(user=request.user)
-    trips_have_recipe = Trip.objects.filter(recipes__id=recipe_id)
+    trips_have_recipe = Trip.objects.filter(recipes__id=recipe_id, user__id=request.user.id)
     comment_form = CommentForm()
     return render(request, 'recipe_detail.html', {
         'recipe': recipe,
