@@ -43,11 +43,14 @@ Understanding constraints, realities and making decisions for the sake of delive
 
 ### Review:
 
-![review1](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review1.png)
-![review2](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review2.png)
-![review3](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review3.png)
-![review4](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review4.png)
-![review5](https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review5.png)
+
+<img align="left" alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review1.png" />
+<img align="left" alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review2.png" />
+<img align="left" alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review3.png" />
+<img align="left" alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review4.png" />
+<img align="left" alt="Smore Recipes icon" width="120px" src="https://github.com/luye713/SmoreRecipes/blob/main/main_app/static/assets/md/review5.png" />
+
+
 
 <br />
 
