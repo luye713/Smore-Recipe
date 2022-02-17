@@ -7,7 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
 
 <a href="{% url 'trip_detail' trip.id %}"><img src="{% static 'assets/cancel' %}.svg"></a>
-<a class="btn delete_trip" href="{% url 'trip_delete' trip.id %}" >Delete trip</a>
+<a class="btn delete_trip" href="{% url 'trip_delete_confirm' trip.id %}" >Delete trip</a>
 
 <form class="trip-create" action="{% url 'trip_update' trip.id %}" method="post">
     {% csrf_token %}

@@ -6,7 +6,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
 
+{% if recipe_id == 0 %}
+<a href="{% url 'trip_list' %}"><img src="{% static 'assets/cancel' %}.svg"></a>
+{% else %}
 <a href="{% url 'recipe_choose' recipe_id %}"><img src="{% static 'assets/cancel' %}.svg"></a>
+{% endif %}
 
 <form class="trip-create" action="{% url 'trip_add' recipe_id %}" method="post">
     {% csrf_token %}
@@ -21,17 +25,6 @@
     </style>
     {{ trip_form.as_p }}
     
-    <div class="btn-wrapper">
-        {% for equipment in equipments %}
-            {% if equipment in trip.equipments.all %}
-                <div class="tool-wrapper active">
-            {% else %}
-                <div class="tool-wrapper">
-            {% endif %}
-                <p class="tool2"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg" alt="tools"></p>
-            </div>
-        {% endfor %}
-    </div>
 
     <input class="btn" type="submit" value="Create">
 </form>

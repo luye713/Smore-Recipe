@@ -2,25 +2,29 @@
 {% block content %}
 {% load static %}
 
+<a href="{% url 'trip_list' %}"><img src="{% static 'assets/goback' %}.svg"></a>
 
 <div>
     <h1>{{ trip.name }}</h1>
     <h4>{{ trip.start_date }} - {{ trip.end_date }}</h4>
   
     <h4>Cooking tools to bring:</h4>
-    
-    <div class="btn-wrapper">
-        {% for equipment in equipments %}
-            {% if equipment in trip.equipments.all %}
+
+<div class="btn-wrapper">
+    {% for equipment in equipments %}
+        {% if equipment in trip.equipments.all %}
             <div class="tool-wrapper active">
-            {% else %}
+                <a class="tool" href="{% url 'unassoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
+            </div>
+        {% else %}
             <div class="tool-wrapper">
-            {% endif %}
                 <a class="tool" href="{% url 'assoc_equipment' trip.id equipment.id %}"><img src="{% static 'assets/cookingtool/' %}{{ equipment.name|cut:" " }}.svg"></a>
             </div>
-        {% endfor %}
-    </div>
+        {% endif %}
+    {% endfor %}
 </div>
+
+
 
 <div class="cards">
     {% for recipe in trip.recipes.all %}
