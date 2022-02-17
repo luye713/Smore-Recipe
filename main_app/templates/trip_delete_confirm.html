@@ -4,10 +4,10 @@
 
 
 
-<p>Are you sure you want to delete this trip?</p>
+<p style="margin: 20px auto; text-align: center;">Are you sure you want to delete this trip?</p>
 
-<a class="btn delete_trip" href="{% url 'trip_delete' trip.id %}" >Delete trip</a>
-<a class="btn delete_trip" href="{% url 'trip_update_form' trip.id %}">Cancel</a>
+<a class="btn delete_trip" style="max-width: 335px; margin: auto;" href="{% url 'trip_delete' trip.id %}" >Delete trip</a>
+<a class="btn2 delete_trip" style="display:block; max-width: 335px; width: 100%; text-align: center; margin: 20px auto;" href="{% url 'trip_update_form' trip.id %}">Cancel</a>
 
 
 {% endblock %}
