@@ -34,7 +34,7 @@
 
 <div class="trip-tags">
     <a class="btn2" href="{% url 'recipe_choose' recipe.id %}">+ Add to Trip!</a>
-    {% if user.trip_set.count  %}
+    {% if trips_have_recipe.count  %}
         <p>This recipe is in:</p>
         {% for trip in trips_have_recipe %}
             <a class="trip-tag" href="{% url 'trip_detail' trip.id %}">{{ trip.name }}</a>
