@@ -28,6 +28,10 @@ class Category(models.Model):
     def __str__(self):
         return f"category: {self.name}"
 
+
+
+
+
 class Recipe(models.Model):
     name = models.CharField(max_length=100)
     categories = models.ManyToManyField(Category)
@@ -37,6 +41,11 @@ class Recipe(models.Model):
         return f"name: {self.name}"
     def get_absolut_url(self):
         return reverse('recipe_detail', kwargs={'recipe_id': self.id})
+
+
+
+
+
 
 class Ingredient(models.Model):
     text = models.CharField(max_length=100)
@@ -61,6 +70,11 @@ class Comment(models.Model):
         return f"comment: {self.text}"
     def get_absolut_url(self):
         return reverse('home', kwargs={'comment_id': self.id})
+
+
+
+
+
 
 class Trip(models.Model):
     name = models.CharField(max_length=50)

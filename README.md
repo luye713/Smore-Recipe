@@ -217,8 +217,10 @@ I don’t like to be constrained with the type of cooking tools usually. I want 
 ### Icebox:
 
 - Created user profile where user can upload profile images
+- More Social media aspect
 - Enable commenting when user view Recipe (completed)
 - Create a Grocery List where user can keep track ingredient to buy (completed)
+- Auto-generated grocery list.
 
 ---
 

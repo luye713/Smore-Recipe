@@ -38,6 +38,7 @@ def signup(request):
 
 
 
+
 # TRIP
 @login_required
 def trip_list(request):
@@ -92,6 +93,9 @@ def trip_update(request, trip_id):
     trip.save()
     
     return redirect('trip_detail', trip_id=trip_id)
+
+
+
 
 # RECIPE
 @login_required
@@ -152,6 +156,7 @@ def recipe_delete(request, trip_id, recipe_id):
 
 
 
+
 # DOWNLOAD PDF:
 def html_to_pdf(template_src, context_dict={}):
     template = get_template(template_src)
@@ -174,6 +179,7 @@ def recipe_download(request, recipe_id):
 
 
 
+
 # EQUIPMENT
 @login_required
 def assoc_equipment(request, trip_id, equipment_id):
@@ -184,6 +190,7 @@ def assoc_equipment(request, trip_id, equipment_id):
 def unassoc_equipment(request, trip_id, equipment_id):
     Trip.objects.get(id=trip_id).equipments.remove(equipment_id)
     return redirect('trip_detail', trip_id=trip_id)
+
 
 
 
@@ -211,6 +218,7 @@ class grocery_update(UpdateView):
 def grocery_delete(request, grocery_id):
     Grocery.objects.get(id=grocery_id).delete()
     return redirect('grocery_list')
+
 
 
 
