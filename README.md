@@ -224,6 +224,16 @@ I don’t like to be constrained with the type of cooking tools usually. I want 
 
 ---
 
+### Key Learning & Challenges:
+
+- Working among a group of designers and developers require good communications.
+- Optimize an app by focusing on the user and user exepriences.
+- Learn each other's obstacles and systems, processes, etc.
+- Empathy and communication allowed us to move forward.
+- We all have a common goals, collaboration over competition.
+
+---
+
 ### License:
 
 Distributed under the MIT License.
