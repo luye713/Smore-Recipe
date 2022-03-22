@@ -74,7 +74,7 @@ Understanding constraints, realities and making decisions for the sake of delive
 | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Developer | Lu Ye             | Database, Wireframe, Routing, Functionality, Styling, Authentication, Authorization, Images & Logo, Github Manager |
 | Developer | Josh Nguyen       | Database, Wireframe, Routing, Functionality, Styling, Authentication, Authorization, Documenter, Database manager  |
-| Designer  | May Wu            | Iterate wireframes, User flow                                                                                      |
+| Designer  | May Wu            | Communications with dev team, wireframes, prototyping, user flow, redlines and icon SVGs as deliverables to dev team, presentation deck.                                                                                      |
 | Designer  | Paula Abejero     | Iterate wireframes, User flow, Style guild - heading and font                                                      |
 | Designer  | Josh Boissiere    | Iterate wireframes, User flow, Recipe Table - Google Doc, Excel                                                    |
 | Designer  | Rabia Malik Jamil | Pitch deck, User flow, Competitive analysis, Problem space, Persona, Prototype                                     |
@@ -247,7 +247,7 @@ Developer:\
 [Josh Nguyen](https://joshnguyentoronto.com)
 
 Designer:\
-[May Wu](https://www.google.com/)\
+[May Wu](https://www.linkedin.com/in/maywuhoo/)\
 [Paula Abejero](https://www.google.com/)\
 [Josh Boissiere](https://www.google.com/)\
 [Rabia Malik Jamil](https://www.google.com/)
