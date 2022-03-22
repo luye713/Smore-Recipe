@@ -248,6 +248,6 @@ Developer:\
 
 Designer:\
 [May Wu](https://www.linkedin.com/in/maywuhoo/)\
-[Paula Abejero](https://www.google.com/)\
+[Paula Abejero](https://www.linkedin.com/in/paulaabejero/)\
 [Josh Boissiere](https://www.google.com/)\
 [Rabia Malik Jamil](https://www.google.com/)
